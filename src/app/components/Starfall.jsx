@@ -48,7 +48,7 @@ export default function Starfall() {
     <>
       <style>{`
         .starfall {
-          position: fixed;
+          position: absolute;
           inset: 0;
           transform-style: preserve-3d;
           perspective: 1000px;
