@@ -22,7 +22,7 @@ const Hero = () => {
           fontFamily: "'Montserrat', sans-serif",
         }}
       >
-        <Starfall />
+        {/* <Starfall /> */}
         {/* Top-right orangish gradient glow */}
         <div className="pointer-events-none absolute -top-24 -right-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl"></div>
         {/* Your content here */}

@@ -2,13 +2,14 @@
 
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Image from "next/image";
 
 const Services = () => {
   return (
     <>
-      <section className="relative">
+      <section className="relative montserrat">
         {/* <div className="relative flex flex-col justify-start items-start  w-full"> */}
-        <h2 className="text-6xl montserrat font-bold z-10 m-20 mt-10">
+        <h2 className="text-6xl montserrat m-20 mt-10">
           Our Services
         </h2>
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-tr from-blue-400/40 via-blue-500/30 to-transparent blur-3xl"></div>
@@ -52,7 +53,7 @@ const Services = () => {
                 Automate repetitive processes across tools and teams with
                 robust, reliable workflows tailored to your operations.
               </p>
-               
+              <Image src="/workflow.png" alt="Logo" width={380} height={80} />
             </div>
             <div className="w-px bg-gray-300" />
             <div className="flex-1 p-8 flex flex-col items-center justify-center text-center">
@@ -61,6 +62,11 @@ const Services = () => {
                 Identify high-value AI opportunities, plan roadmaps, and ship
                 solutions that deliver measurable impact.
               </p>
+              <DotLottieReact
+                src="https://lottie.host/27641533-307a-41fb-a495-55e4f65b8cdb/aFEW0sH8wM.lottie"
+                loop
+                autoplay
+              />
             </div>
           </div>
         </div>

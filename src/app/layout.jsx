@@ -23,6 +23,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         {/* <video
+        className="absolute top-0 left-0 w-full h-full object-cover overflow-auto "
+        src= "hero_vid.mp4"
+        autoPlay
+        loop
+        muted
+      /> */}
         <Navbar />
         {children}
       </body>

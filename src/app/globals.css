@@ -22,12 +22,23 @@ body {
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
 }
 
-.Chatbot {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+
+.section-with-light {
   position: relative;
+  overflow: hidden;
+}
+
+.section-with-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(ellipse at left, rgba(255, 140, 0, 0.6), rgba(0,0,0,0) 70%);
+  filter: blur(80px);
+  z-index: 0; /* stays behind text */
 }

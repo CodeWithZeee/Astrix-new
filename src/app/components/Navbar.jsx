@@ -6,11 +6,11 @@ const Navbar = () => {
     // <div className="m-10 bg-orange-600 rounded-3xl h-16 flex items-center px-4 overflow-hidden ">
     <div className="m-10  bg-transparent backdrop-blur rounded-3xl h-16 flex items-center px-4 overflow-hidden fixed top-0 left-0 right-0 z-150">
       <Image
-        src="/logo.png"
+        src="/Astrix_logo.png"
         alt="Astrix Digital Media"
-        width={100}
-        height={150}
-        className="h-16 w-auto object-contain"
+        width={70}
+        height={50}
+        className="h-12 w-auto object-contain"
       />
       <div className="mx-10 ml-auto flex items-center gap-4">
         <ul className="flex gap-14 space-x-4">

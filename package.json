@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "prisma generate && next build --turbopack",
     "start": "next start"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.17.3",
+    "@prisma/client": "^6.16.3",
+    "lucide-react": "^0.544.0",
+    "mongodb": "^6.20.0",
     "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "styled-jsx": "^5.1.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.14",
@@ -19,6 +23,7 @@
     "@types/react": "19.1.17",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
+    "prisma": "^6.16.3",
     "tailwindcss": "^4.1.14",
     "typescript": "5.9.3"
   }

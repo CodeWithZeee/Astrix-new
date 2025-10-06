@@ -1,0 +1,29 @@
+Step 1: npm install prisma --save-dev (in terminal)
+Step 2: npx prisma init --datasource-provider mongodb --output ../generated/prisma (in terminal)
+
+Step 3: get the mongodb connection string Example (mongodb+srv://username:password@cluster0.xxxx000.mongodb.net/name) in your .env file
+
+Step 4: Add prisma.js in /lib/prisma.{js,ts}
+```
+    import { PrismaClient } from "@prisma/client";
+
+    const prisma = new PrismaClient();
+
+    export default prisma;
+```
+
+Step 5: add in prisma/schema.prisma (folder)
+
+Example: 
+
+model Test {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  name  String
+  email String @unique
+}
+
+Step 6: Generate client types: npx prisma generate (terminal)
+Step 7: Push to MongoDB: npx prisma db push (terminal)
+
+
+Optional: View Prisma Studio locally: npx prisma studio (terminal)
