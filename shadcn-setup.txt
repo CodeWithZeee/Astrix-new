@@ -1,0 +1,16 @@
+# shadcn/ui Setup Guide
+
+1. **Install dependencies**
+    ```
+    npx shadcn@latest init (terminal)
+    ```
+
+2. **Import and use shadcn/ui components
+    ```jsx
+        npx shadcn@latest add button (terminal)
+    ```
+
+6. **(Optional) Customize shadcn/ui theme**
+    - Refer to the [shadcn/ui documentation](https://ui.shadcn.com/docs/installation) for advanced configuration.
+
+# Done!

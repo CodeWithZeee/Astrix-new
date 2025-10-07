@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,13 +24,23 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         {/* <video
+        {/* <video
         className="absolute top-0 left-0 w-full h-full object-cover overflow-auto "
         src= "hero_vid.mp4"
         autoPlay
         loop
         muted
       /> */}
+        <Toaster
+          toastOptions={{
+            position: "top-center",
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          }}
+        />
         <Navbar />
         {children}
       </body>

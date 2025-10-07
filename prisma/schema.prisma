@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -21,18 +20,12 @@ model Test {
 }
 
 model Form {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
-  email     String
-  message   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  isConsentGiven Boolean  @default(false)
-  services Service[]
-}
-
-enum Service {
-  AI_Chatbot_or_Voice_Agents
-  Automation_Workflows
-  Performance_Marketing
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  email         String
+  message       String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  isConsentGiven Boolean @default(false)
+  services      String[] // <-- changed from Service[]
 }
