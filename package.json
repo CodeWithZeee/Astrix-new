@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.33.3",
     "@hookform/resolvers": "^5.2.2",
     "@lottiefiles/dotlottie-react": "^0.17.3",
     "@prisma/client": "^6.16.3",

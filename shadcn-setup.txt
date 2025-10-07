@@ -5,12 +5,15 @@
     npx shadcn@latest init (terminal)
     ```
 
-2. **Import and use shadcn/ui components
-    ```jsx
-        npx shadcn@latest add button (terminal)
-    ```
+2. **Add shadcn/ui components
+   
+    npx shadcn@latest add button (terminal) - For Button
+    npx shadcn@latest add input  (terminal) - For Input
+    npx shadcn@latest add label  (terminal) - For Label
+    npx shadcn@latest add form   (terminal) - For Form
+   
+   
+3. Example Adding Form - follow through https://ui.shadcn.com/docs/components/form
 
-6. **(Optional) Customize shadcn/ui theme**
-    - Refer to the [shadcn/ui documentation](https://ui.shadcn.com/docs/installation) for advanced configuration.
 
 # Done!
