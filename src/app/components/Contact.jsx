@@ -40,6 +40,7 @@ const formSchema = z.object({
         "AI Chatbot or Voice Agents",
         "Automation Workflows",
         "Performance Marketing",
+        "AI Consulting",
       ])
     )
     .min(1, { message: "Select at least one service." }),
@@ -50,6 +51,7 @@ const SERVICES = [
   "AI Chatbot or Voice Agents",
   "Automation Workflows",
   "Performance Marketing",
+  "AI Consulting"
 ];
 
 export default function ContactForm() {

@@ -24,6 +24,10 @@ const Navbar = () => {
       name: "Contact",
       href: "/contact",
     },
+    {
+      name: "FAQ",
+      href: "#FAQ",
+    },
   ];
 
   const toggleMenu = () => {

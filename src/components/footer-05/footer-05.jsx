@@ -27,11 +27,7 @@ const footerLinks = [
   // },
   {
     title: "Help",
-    href: "#FAQ",
-  },
-  {
-    title: "Privacy",
-    href: "#",
+    href: "/contact",
   },
 ];
 
