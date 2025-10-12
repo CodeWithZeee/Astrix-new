@@ -46,7 +46,7 @@ const FAQAccordion = () => {
     };
 
     return (
-      <li className="bg-white my-2 shadow-lg">
+      <li className="bg-[#0d0d0d] my-2 shadow-lg">
         <h2
           onClick={handleClick}
           className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
@@ -68,7 +68,7 @@ const FAQAccordion = () => {
           }}
           className="border-l-2 border-purple-600 overflow-hidden transition-all duration-500"
         >
-          <p className="p-3 text-gray-900">{item.answer}</p>
+          <p className="p-3 text-white-900">{item.answer}</p>
         </div>
       </li>
     );
@@ -79,10 +79,10 @@ const FAQAccordion = () => {
       <main className="p-5 bg-[#0a0a0a]">
         <div className="flex justify-center items-start my-2">
           <div className="w-full sm:w-10/12 md:w-1/2 my-1">
-            <h2 className="text-3xl text-center  text-white mb-2">
+            <h2 className="text-3xl text-center  text-white mb-6">
               FAQ - Order, Shipping, Etc.
             </h2>
-            <ul className="flex flex-col text-black ">
+            <ul className="flex flex-col text-white">
               {faqItems.map((item) => (
                 <AccordionItem key={item.id} item={item} />
               ))}

@@ -9,8 +9,9 @@ const GlassSocialIcons = () => {
 
       {/* Social Icons Container */}
       <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5 p-3 sm:p-4 lg:p-5">
-        <GlassIcon href="#">
+        <GlassIcon href="#" className="">
           <ShoppingCart />
+          <span className="text-xs">E-commerce</span>
         </GlassIcon>
 
         <GlassIcon href="#" icon="instagram">

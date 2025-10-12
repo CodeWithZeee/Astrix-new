@@ -43,7 +43,7 @@ const PricingPlans = () => {
   return (
     <div
       id="PricingPlans"
-      className="min-h-screen bg-[#0a0a0a] font-['Montserrat',sans-serif]"
+      className="min-h-screen bg-[#0a0a0a] font-['Comfortaa',sans-serif]"
     >
       <header className="max-w-6xl mx-auto py-8 px-5 flex justify-between lg:px-8">
         {/* Uncomment if needed */}

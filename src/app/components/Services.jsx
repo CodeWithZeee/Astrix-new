@@ -67,7 +67,7 @@ const Services = () => {
               </p>
               <div className="w-full max-w-xs">
                 <Image
-                  src="/workflow.png"
+                  src="/workflow2.png"
                   alt="Logo"
                   width={380}
                   height={80}

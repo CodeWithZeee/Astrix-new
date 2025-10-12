@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-family-sans: var(--font-montserrat), "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: var(--font-comfortaa), "comfortaa", ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 .quicksand {
@@ -21,8 +22,15 @@
   font-weight: 400;
 }
 
+.comfortaa {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .montserrat {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
 }
@@ -144,12 +152,12 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     overflow-x: hidden;
   }
 
   .montserrat {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
   }
