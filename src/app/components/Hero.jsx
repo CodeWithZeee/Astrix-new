@@ -20,7 +20,7 @@ const Hero = () => {
           maxWidth: "100%",
           // width: "50%",
           textAlign: "center",
-          fontFamily: "'Comfortaa', sans-serif",
+          fontFamily: "'ubuntu', sans-serif",
           fontWeight: "500",
         }}
         className="px-4 sm:px-6 lg:px-8"

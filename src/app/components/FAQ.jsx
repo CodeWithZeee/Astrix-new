@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useRef } from 'react';
+"use client";
+import React, { useState, useRef } from "react";
 
 const FAQAccordion = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -8,53 +8,58 @@ const FAQAccordion = () => {
     {
       id: 1,
       question: "When will my order arrive?",
-      answer: "Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation"
+      answer:
+        "Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation",
     },
     {
       id: 2,
       question: "How do I track my order?",
-      answer: "Once shipped, you'll get a confirmation email that includes a tracking number and additional information regarding tracking your order."
+      answer:
+        "Once shipped, you'll get a confirmation email that includes a tracking number and additional information regarding tracking your order.",
     },
     {
       id: 3,
       question: "What's your return policy?",
-      answer: "We allow the return of all items within 30 days of your original order's date. If you're interested in returning your items, send us an email with your order number and we'll ship a return label."
+      answer:
+        "We allow the return of all items within 30 days of your original order's date. If you're interested in returning your items, send us an email with your order number and we'll ship a return label.",
     },
     {
       id: 4,
       question: "How do I make changes to an existing order?",
-      answer: "Changes to an existing order can be made as long as the order is still in \"processing\" status. Please contact our team via email and we'll make sure to apply the needed changes. If your order has already been shipped, we cannot apply any changes to it. If you are unhappy with your order when it arrives, please contact us for any changes you may require."
+      answer:
+        "Changes to an existing order can be made as long as the order is still in 'processing' status. Please contact our team via email and we'll make sure to apply the needed changes. If your order has already been shipped, we cannot apply any changes to it.",
     },
     {
       id: 5,
       question: "What shipping options do you have?",
-      answer: "For USA domestic orders we offer FedEx and USPS shipping."
+      answer: "For USA domestic orders we offer FedEx and USPS shipping.",
     },
     {
       id: 6,
-      question: "What payment methods do you accept?",
-      answer: "Any method of payments acceptable by you. For example: We accept MasterCard, Visa, American Express, PayPal, JCB Discover, Gift Cards, etc."
-    }
+      question: "Can I purchase items again?",
+      answer:
+        "Absolutely! We're more than happy to update your previous order to include new items.",
+    },
   ];
 
   const AccordionItem = ({ item }) => {
+    const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
-    const isActive = activeTab === item.id;
 
-    const handleClick = () => {
-      setActiveTab(isActive ? 0 : item.id);
+    const toggleAccordion = () => {
+      setIsOpen(!isOpen);
     };
 
     return (
-      <li className="bg-[#0d0d0d] my-2 shadow-lg">
+      <li className="bg-[#0d0d0d] my-2 shadow-lg  rounded-2xl border border-purple-500 p-4">
         <h2
-          onClick={handleClick}
+          onClick={toggleAccordion}
           className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
         >
           <span>{item.question}</span>
           <svg
             className={`fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500 ${
-              isActive ? 'rotate-180' : ''
+              isOpen ? "rotate-180" : ""
             }`}
             viewBox="0 0 20 20"
           >
@@ -64,32 +69,33 @@ const FAQAccordion = () => {
         <div
           ref={contentRef}
           style={{
-            maxHeight: isActive ? `${contentRef.current?.scrollHeight}px` : '0px'
+            maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+            overflow: "hidden",
+            transition: "max-height 0.3s ease-in-out",
           }}
-          className="border-l-2 border-purple-600 overflow-hidden transition-all duration-500"
         >
-          <p className="p-3 text-white-900">{item.answer}</p>
+          <div className="border-l-2 border-purple-600 border-solid">
+            <p className="p-3 text-white-900">{item.answer}</p>
+          </div>
         </div>
       </li>
     );
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
-      <main className="p-5 bg-[#0a0a0a]">
-        <div className="flex justify-center items-start my-2">
-          <div className="w-full sm:w-10/12 md:w-1/2 my-1">
-            <h2 className="text-3xl text-center  text-white mb-6">
-              FAQ - Order, Shipping, Etc.
-            </h2>
-            <ul className="flex flex-col text-white">
-              {faqItems.map((item) => (
-                <AccordionItem key={item.id} item={item} />
-              ))}
-            </ul>
-          </div>
+    <div className="leading-relaxed">
+      <div className="flex justify-center items-start my-2">
+        <div className="w-full sm:w-10/12 md:w-1/2 my-1">
+          <h2 className="text-5xl text-center text-white mb-8">
+            FAQ - Order, Shipping, Etc.
+          </h2>
+          <ul className="flex flex-col text-white">
+            {faqItems.map((item) => (
+              <AccordionItem key={item.id} item={item} />
+            ))}
+          </ul>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
