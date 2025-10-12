@@ -79,13 +79,15 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-10">
-      <h2 className="text-2xl font-semibold mb-6 text-center">Contact Us</h2>
+    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center">
+        Contact Us
+      </h2>
 
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 shadow-md rounded-2xl p-6"
+          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6"
         >
           {/* Name */}
           <FormField
@@ -188,7 +190,8 @@ export default function ContactForm() {
                 <div className="space-y-0.5">
                   <FormLabel className="text-base">Consent</FormLabel>
                   <FormDescription>
-                    I agree to the collection and processing of my data.
+                    Yes, I agree to receive texts and emails on my contact
+                    information.
                   </FormDescription>
                 </div>
                 <FormControl>

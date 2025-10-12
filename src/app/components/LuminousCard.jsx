@@ -1,5 +1,5 @@
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 const LuminousCard = (props) => {
   const [isActive, setIsActive] = useState(false);
@@ -9,7 +9,7 @@ const LuminousCard = (props) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-2 sm:p-4">
       <style>{`
         @import url('https://db.onlinewebfonts.com/c/12ff62164c9778917bddb93c6379cf47?family=Aeonik+Pro+Regular');
 
@@ -23,16 +23,24 @@ const LuminousCard = (props) => {
           box-shadow: inset 0 1.01rem 0.2rem -1rem transparent,
             inset 0 -1.01rem 0.2rem -1rem transparent, 0 -1.02rem 0.2rem -1rem transparent,
             0 1rem 0.2rem -1rem transparent, 0 0 0 1px rgba(255, 255, 255, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.27), 0 0 0 1px #333;
-          width: 18rem;
-          height: 24rem;
+          width: 16rem;
+          height: 20rem;
           border-radius: 1.8rem;
           color: #fff;
-          padding: 1rem;
+          padding: 0.8rem;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
           transition: all 0.4s ease-in-out, translate 0.4s ease-out;
           font-family: 'Aeonik Pro Regular', system-ui, -apple-system, sans-serif;
+        }
+
+        @media (min-width: 640px) {
+          .card {
+            width: 18rem;
+            height: 24rem;
+            padding: 1rem;
+          }
         }
 
         .card::before {
@@ -406,7 +414,7 @@ const LuminousCard = (props) => {
         }
       `}</style>
 
-      <div className={`card ${isActive ? 'active' : ''}`}>
+      <div className={`card ${isActive ? "active" : ""}`}>
         <div className="light-layer">
           <div className="slit"></div>
           <div className="lumen">
@@ -429,13 +437,32 @@ const LuminousCard = (props) => {
                 alt={props.title}
                 width="51.2"
                 height="51.2"
-                style={{ width: '3.2rem', height: '3.2rem', objectFit: 'contain' }}
+                style={{
+                  width: "3.2rem",
+                  height: "3.2rem",
+                  objectFit: "contain",
+                }}
               />
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="3.2rem" height="3.2rem" viewBox="0 0 1024 1024">
-                <path fill="url(#iconGradient)" d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m278 533c0 1.1-.1 2.1-.2 3.1c0 .4-.1.7-.2 1a14.2 14.2 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7c-.2.4-.4.8-.5 1.2c-.3.5-.5 1.1-.8 1.6c-.2.4-.4.7-.7 1.1c-.3.5-.7 1-1 1.5c-.3.4-.5.7-.8 1c-.4.4-.8.9-1.2 1.3c-.3.3-.6.6-1 .9c-.4.4-.9.8-1.4 1.1c-.4.3-.7.6-1.1.8c-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4c-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1c-.3-.3-.6-.6-1-.9c-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5c-.2-.4-.5-.7-.7-1.1c-.3-.5-.6-1.1-.8-1.6c-.2-.4-.4-.8-.5-1.2c-.2-.6-.4-1.2-.6-1.7c-.1-.4-.3-.8-.4-1.2c-.2-.7-.3-1.3-.4-2c-.1-.3-.1-.7-.2-1c-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1c.1-.3.1-.7.2-1a14.2 14.2 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7c.2-.4.4-.8.5-1.2c.2-.5.5-1.1.8-1.6c.2-.4.4-.7.7-1.1c.6-.9 1.2-1.7 1.8-2.5c.4-.4.8-.9 1.2-1.3c.3-.3.6-.6 1-.9c.4-.4.9-.8 1.3-1.1s.7-.6 1.1-.8c.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8l1.4 1.1c.3.3.6.6 1 .9c.4.4.8.8 1.2 1.3c.7.8 1.3 1.6 1.8 2.5c.2.4.5.7.7 1.1c.3.5.6 1 .8 1.6c.2.4.4.8.5 1.2c.2.6.4 1.2.6 1.7c.1.4.3.8.4 1.2c.2.7.3 1.3.4 2c.1.3.1.7.2 1c.1 1 .2 2.1.2 3.1zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4l84.5 56.4l84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3z" filter="url(#strong-inner)" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="3.2rem"
+                height="3.2rem"
+                viewBox="0 0 1024 1024"
+              >
+                <path
+                  fill="url(#iconGradient)"
+                  d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m278 533c0 1.1-.1 2.1-.2 3.1c0 .4-.1.7-.2 1a14.2 14.2 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7c-.2.4-.4.8-.5 1.2c-.3.5-.5 1.1-.8 1.6c-.2.4-.4.7-.7 1.1c-.3.5-.7 1-1 1.5c-.3.4-.5.7-.8 1c-.4.4-.8.9-1.2 1.3c-.3.3-.6.6-1 .9c-.4.4-.9.8-1.4 1.1c-.4.3-.7.6-1.1.8c-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4c-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1c-.3-.3-.6-.6-1-.9c-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5c-.2-.4-.5-.7-.7-1.1c-.3-.5-.6-1.1-.8-1.6c-.2-.4-.4-.8-.5-1.2c-.2-.6-.4-1.2-.6-1.7c-.1-.4-.3-.8-.4-1.2c-.2-.7-.3-1.3-.4-2c-.1-.3-.1-.7-.2-1c-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1c.1-.3.1-.7.2-1a14.2 14.2 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7c.2-.4.4-.8.5-1.2c.2-.5.5-1.1.8-1.6c.2-.4.4-.7.7-1.1c.6-.9 1.2-1.7 1.8-2.5c.4-.4.8-.9 1.2-1.3c.3-.3.6-.6 1-.9c.4-.4.9-.8 1.3-1.1s.7-.6 1.1-.8c.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8l1.4 1.1c.3.3.6.6 1 .9c.4.4.8.8 1.2 1.3c.7.8 1.3 1.6 1.8 2.5c.2.4.5.7.7 1.1c.3.5.6 1 .8 1.6c.2.4.4.8.5 1.2c.2.6.4 1.2.6 1.7c.1.4.3.8.4 1.2c.2.7.3 1.3.4 2c.1.3.1.7.2 1c.1 1 .2 2.1.2 3.1zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4l84.5 56.4l84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3z"
+                  filter="url(#strong-inner)"
+                />
                 <defs>
-                  <linearGradient id="iconGradient" x1="0" x2="0" y1="-1" y2="0.8">
+                  <linearGradient
+                    id="iconGradient"
+                    x1="0"
+                    x2="0"
+                    y1="-1"
+                    y2="0.8"
+                  >
                     <stop offset="0%" stopColor="#bbb" />
                     <stop offset="100%" stopColor="#555" />
                   </linearGradient>
@@ -451,9 +478,12 @@ const LuminousCard = (props) => {
             )}
           </div>
           <div className="bottom">
-            <h4>{props.title || 'Luminous'}</h4>
-            <p>{props.description || 'Toggle the light'}</p>
-            <div className={`toggle ${isActive ? 'active' : ''}`} onClick={handleToggle}>
+            <h4>{props.title || "Luminous"}</h4>
+            <p>{props.description || "Toggle the light"}</p>
+            <div
+              className={`toggle ${isActive ? "active" : ""}`}
+              onClick={handleToggle}
+            >
               <div className="handle"></div>
               <span>LIGHTS ON</span>
             </div>
