@@ -7,39 +7,39 @@ const FAQAccordion = () => {
   const faqItems = [
     {
       id: 1,
-      question: "When will my order arrive?",
+      question: "What makes Astrix unique?",
       answer:
-        "Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation",
+        "Our unmatched expertise and our tailored approach is what sets us apart. We prefer working with you, instead of for you. We dive into your business and cooperate with you to create actually impactful AI solutions that drive real results.",
     },
     {
       id: 2,
-      question: "How do I track my order?",
+      question: "Is my company a good fit for Astrix?",
       answer:
-        "Once shipped, you'll get a confirmation email that includes a tracking number and additional information regarding tracking your order.",
+        "We work with companies of all sizes across a wide variety of industries. Whether you're just beginning your AI journey or need advanced custom solutions, we're the ideal partner to help you succeed.",
     },
     {
       id: 3,
-      question: "What's your return policy?",
+      question: "How does your subscription model work?",
       answer:
-        "We allow the return of all items within 30 days of your original order's date. If you're interested in returning your items, send us an email with your order number and we'll ship a return label.",
+        "We understand that your business needs can vary from month to month. That's why we offer a flexible subscription model. Subscribe whenever you need AI-driven solutions, and cancel anytime you want. It's that simple!",
     },
     {
       id: 4,
-      question: "How do I make changes to an existing order?",
+      question: "How long does the development phase take?",
       answer:
-        "Changes to an existing order can be made as long as the order is still in 'processing' status. Please contact our team via email and we'll make sure to apply the needed changes. If your order has already been shipped, we cannot apply any changes to it.",
+        "The development timeline depends on the complexity of the solution. Simple workflow automations can be completed in 1-3 days, while chatbot and voice assistant development typically take 1-2 months.",
     },
     {
       id: 5,
-      question: "What shipping options do you have?",
-      answer: "For USA domestic orders we offer FedEx and USPS shipping.",
+      question: "Do you provide support after implementation?",
+      answer: "Yes, we do! Our commitment doesn't end with implementation. We provide continuous monitoring and improvements to ensure your solutions perform optimally, and our support team is available 24/7 whenever you need assistance.",
     },
-    {
-      id: 6,
-      question: "Can I purchase items again?",
-      answer:
-        "Absolutely! We're more than happy to update your previous order to include new items.",
-    },
+    // {
+    //   id: 6,
+    //   question: "Can I purchase items again?",
+    //   answer:
+    //     "Absolutely! We're more than happy to update your previous order to include new items.",
+    // },
   ];
 
   const AccordionItem = ({ item }) => {
@@ -86,9 +86,10 @@ const FAQAccordion = () => {
     <div className="leading-relaxed">
       <div className="flex justify-center items-start my-2">
         <div className="w-full sm:w-10/12 md:w-1/2 my-1">
-          <h2 className="text-5xl text-center text-white mb-8">
-            FAQ - Order, Shipping, Etc.
+          <h2 className="text-5xl text-center text-indigo-600">
+            FAQ
           </h2>
+          <p className="text-gray-500 mb-8 text-center">We've gone ahead and answered the questions we're asked most often.</p>
           <ul className="flex flex-col text-white">
             {faqItems.map((item) => (
               <AccordionItem key={item.id} item={item} />

@@ -27,7 +27,7 @@ import { Loader2 } from "lucide-react";
 const formSchema = z.object({
   name: z
     .string()
-    .min(2, { message: "Name must be at least 2 characters." })
+    .min(3, { message: "Name must be at least 3 characters." })
     .max(50, { message: "Name must be less than 50 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   message: z
@@ -142,7 +142,7 @@ export default function ContactForm() {
           <FormItem>
             <FormLabel>Interested Services</FormLabel>
             <FormDescription>
-              Select the services you’re interested in.
+              Select the services you're interested in.
             </FormDescription>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
               {SERVICES.map((service) => (

@@ -30,10 +30,10 @@ const Industries = () => {
     >
       <div className="section-with-light"></div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 text-center">
-        Industries we work with
+        <span className="text-indigo-600">Industries </span>
+        we work with
       </h2>
       <p className="text-sm sm:text-base text-gray-500 mt-4 max-w-xl text-center px-4">
-        Hear the success stories of the businesses we've helped thrive with AI.
         We work with a variety of different industries.
       </p>
       <GlassSocialIcons />

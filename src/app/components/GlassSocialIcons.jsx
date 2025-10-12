@@ -16,17 +16,22 @@ const GlassSocialIcons = () => {
 
         <GlassIcon href="#" icon="instagram">
           <House />
+          <span className="text-xs">Real Estate</span>
+
         </GlassIcon>
 
         <GlassIcon href="#" icon="gavel">
           <Scale />
+          <span className="text-xs">Legal</span>
         </GlassIcon>
 
         <GlassIcon href="#" icon="whatsapp">
           <PiggyBank />
+          <span className="text-xs">Finance</span>
         </GlassIcon>
         <GlassIcon href="#" icon="whatsapp">
           <Cross />
+          <span className="text-xs">Healthcare</span>
         </GlassIcon>
       </div>
     </div>

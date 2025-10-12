@@ -24,10 +24,6 @@ const Navbar = () => {
       name: "Contact",
       href: "/contact",
     },
-    {
-      name: "About",
-      href: "/about",
-    },
   ];
 
   const toggleMenu = () => {
