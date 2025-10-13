@@ -1,5 +1,5 @@
 import React from "react";
-import { Scale, PiggyBank, Cross, ShoppingCart, House } from "lucide-react";
+import { Scale, PiggyBank, Cross, ShoppingCart, House , HandHeart  } from "lucide-react";
 
 const GlassSocialIcons = () => {
   return (
@@ -10,8 +10,8 @@ const GlassSocialIcons = () => {
       {/* Social Icons Container */}
       <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5 p-3 sm:p-4 lg:p-5">
         <GlassIcon href="#" className="">
-          <ShoppingCart />
-          <span className="text-xs">E-commerce</span>
+          <HandHeart />
+          <span className="text-xs">Personal Help</span>
         </GlassIcon>
 
         <GlassIcon href="#" icon="instagram">
