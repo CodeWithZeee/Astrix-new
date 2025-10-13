@@ -61,7 +61,7 @@ const Services = () => {
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
                 Workflow Automations
               </h3>
-              <p className="text-sm sm:text-base text-gray-500 mb-6">
+              <p className="text-sm sm:text-base text-gray-500">
                 Automate repetitive processes across tools and teams with
                 robust, reliable workflows tailored to your operations.
               </p>
@@ -75,9 +75,9 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="hidden lg:block w-px bg-gray-300" />
+            <div className="hidden lg:block w-px bg-gray-300"/>
             <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold">
                 AI Consulting
               </h3>
               <p className="text-sm sm:text-base text-gray-500 mb-6">

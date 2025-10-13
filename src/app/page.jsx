@@ -6,6 +6,7 @@ import PricingPlans from "./components/PricingPlans";
 import FAQAccordion from "./components/FAQ";
 import Footer05Page from "../components/footer-05/footer-05";
 import StackedCardsFAQ from "../app/components/StackedCardsFAQ";
+import GoodCompany from "./components/GoodCompany";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </div>
       <Services />
       <Industries />
+      <GoodCompany />
       <PricingPlans />
       <FAQAccordion />
       {/* <StackedCardsFAQ /> */}
