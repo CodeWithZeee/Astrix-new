@@ -13,6 +13,10 @@ const Navbar = () => {
       href: "/",
     },
     {
+      name: "Contact",
+      href: "/contact",
+    },
+    {
       name: "Services",
       href: "#Services",
     },
@@ -21,8 +25,8 @@ const Navbar = () => {
       href: "#Industries",
     },
     {
-      name: "Contact",
-      href: "/contact",
+      name: "Pricing",
+      href: "#PricingPlans",
     },
     {
       name: "FAQ",
