@@ -75,20 +75,21 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="hidden lg:block w-px bg-gray-300"/>
-            <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold">
+            <div className="hidden lg:block w-px bg-gray-300" />
+            <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center text-center -mt-6">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
                 AI Consulting
               </h3>
-              <p className="text-sm sm:text-base text-gray-500 mb-6">
+              <p className="text-sm sm:text-base text-gray-500">
                 Identify high-value AI opportunities, plan roadmaps, and ship
                 solutions that deliver measurable impact.
               </p>
-              <div className="w-full max-w-xs">
+              <div className="w-full max-w-sm">
                 <DotLottieReact
                   src="https://lottie.host/27641533-307a-41fb-a495-55e4f65b8cdb/aFEW0sH8wM.lottie"
                   loop
                   autoplay
+                  style={{ width: "100%", height: "236px" }}
                 />
               </div>
             </div>

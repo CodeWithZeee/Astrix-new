@@ -1,6 +1,8 @@
 import React from "react";
 import Starfall from "./Starfall";
 import SuperButton from "./SuperButton";
+import AnimatedButton from "./AnimatedButton";
+
 const Hero = () => {
   return (
     <>
@@ -36,10 +38,9 @@ const Hero = () => {
           We elevate and grow organizations using top-tier Artificial
           Intelligence solutions.
         </h2>
-        {/* Bottom-left blueish gradient glow */}
-        <SuperButton />
-        {/* <div className="pointer-events-none absolute -bottom-24 -left-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-tr from-blue-400/40 via-blue-500/30 to-transparent blur-3xl"></div> */}
-      </div>
+        {/* <SuperButton /> */}
+        <AnimatedButton />
+        </div>
     </>
   );
 };
