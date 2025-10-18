@@ -2,6 +2,8 @@ import { Comfortaa } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
+import { LoadingProvider } from "./components/LoadingContext";
+import RevealAnimation from "./components/RevealAnimation";
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -38,7 +40,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <Navbar />
-        {children}
+        <LoadingProvider>{children}</LoadingProvider>
       </body>
     </html>
   );

@@ -1,9 +1,9 @@
 import { Separator } from "@/components/ui/separator";
 import {
-  DribbbleIcon,
-  GithubIcon,
-  TwitchIcon,
+  Instagram ,
+  Linkedin ,
   TwitterIcon,
+  Facebook,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,6 +69,20 @@ const Footer05Page = () => {
 
             <div className="flex items-center gap-4 sm:gap-5 text-muted-foreground">
               <Link
+                href="https://www.instagram.com/astrix_digital_media/"
+                target="_blank"
+                className="hover:text-foreground transition-colors"
+              >
+                <Instagram  className="h-4 w-4 sm:h-5 sm:w-5" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/astrix-digital-media"
+                target="_blank"
+                className="hover:text-foreground transition-colors"
+              >
+                <Linkedin   className="h-4 w-4 sm:h-5 sm:w-5" />
+              </Link>
+              <Link
                 href="#"
                 target="_blank"
                 className="hover:text-foreground transition-colors"
@@ -76,25 +90,11 @@ const Footer05Page = () => {
                 <TwitterIcon className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/AstrixDigitalMedia/"
                 target="_blank"
                 className="hover:text-foreground transition-colors"
               >
-                <DribbbleIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-              </Link>
-              <Link
-                href="#"
-                target="_blank"
-                className="hover:text-foreground transition-colors"
-              >
-                <TwitchIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-              </Link>
-              <Link
-                href="#"
-                target="_blank"
-                className="hover:text-foreground transition-colors"
-              >
-                <GithubIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </div>
           </div>

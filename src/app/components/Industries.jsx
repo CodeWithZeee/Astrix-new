@@ -1,6 +1,8 @@
 import React from "react";
 import GlassSocialIcons from "./GlassSocialIcons";
 import LuminousCard from "./LuminousCard";
+import Card from "./CardComponent";
+
 const Industries = () => {
   const cardInfo = [
     {
@@ -37,10 +39,25 @@ const Industries = () => {
         We work with a variety of different industries.
       </p>
       <GlassSocialIcons />
-      <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mt-8">
-        <LuminousCard {...cardInfo[0]} />
+      <div className="flex sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mt-8">
+        {/* <LuminousCard {...cardInfo[0]} />
         <LuminousCard {...cardInfo[1]} />
-        <LuminousCard {...cardInfo[2]} />
+        <LuminousCard {...cardInfo[2]} /> */}
+        <Card
+        heading="Chatbots"
+        description="We develop AI-powered customer support chatbots that provide instant helpful support, recommend products, and handle returns."
+        imageUrl="Chatbot3.jpg"
+      />
+      <Card
+        heading="Voice assistants "
+        description="We develop advanced voice-based AI assistants that seamlessly handle inbound customer calls and provide personalised support, 24/7."
+        imageUrl="voice_assistant.jpg"
+      />
+      <Card
+        heading="Automations"
+        description="We automate inventory tracking, order management, and customer notifications to improve operational efficiency and reduce human error."
+        imageUrl="workflow3.png"
+      />
       </div>
     </div>
   );
