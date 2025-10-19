@@ -51,7 +51,7 @@ const Industries = () => {
       <Card
         heading="AI Calling Agent"
         description="We develop advanced voice-based AI assistants that seamlessly handle inbound customer calls and provide personalised support, 24/7."
-        imageUrl="voice_assistant.jpg"
+        imageUrl="Calling_agent.jpg"
       />
       <Card
         heading="Automations"
