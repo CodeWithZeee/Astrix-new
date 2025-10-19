@@ -8,9 +8,9 @@ const AboutUs = () => {
       <p className="border border-white/20 text-sm px-8 py-1 rounded-full mb-8">
         About us
       </p>
-
+      
       {/* Main Text */}
-      <div className="max-w-3xl text-4xl font-semibold leading-snug text-justify">
+      <div className="max-w-2xl text-3xl font-semibold leading-snug text-justify">
         <span className="">
           Hi, we're{" "}
           <span className="inline-flex items-center">
@@ -20,7 +20,7 @@ const AboutUs = () => {
               alt="Astrix Logo"
               width={42}
               height={32}
-              className="mx-2 inline-block"
+              className="mx-2"
             />
           </span>
         </span>

@@ -9,7 +9,7 @@ export default function Card({
 }) {
   return (
     <main className=" bg-[#0a0a0a] flex flex-col justify-center items-center  font-sans">
-      <div className="group relative w-96 h-[36rem] rounded-4xl overflow-hidden cursor-pointer text-gray-100 shadow-2xl">
+      <div className="group relative w-60 h-[28rem] rounded-4xl overflow-hidden cursor-pointer text-gray-100 shadow-2xl">
         {/* Image */}
         <img
           src={imageUrl}

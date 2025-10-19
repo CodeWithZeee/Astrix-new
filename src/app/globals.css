@@ -320,3 +320,56 @@
 .group:hover .animate-marquee {
   animation-play-state: paused;
 }
+
+/* Hide all horizontal bars, separators, and top borders */
+hr,
+.border-t,
+[data-slot="separator"],
+.separator,
+.divider,
+.horizontal-bar {
+  display: none !important;
+}
+
+/* Hide custom horizontal borders */
+[class*="border-t"],
+[class*="border-top"],
+[class*="separator"],
+[class*="divider"] {
+  border-top: none !important;
+  display: none !important;
+}
+
+/* Calendly badge/button font override */
+/* The PopupWidget mounts a badge element (portal). Target its classes and force the font. */
+.calendly-root .calendly-badge-widget,
+.calendly-root .calendly-badge-widget .calendly-badge-content,
+.calendly-badge-widget,
+.calendly-badge-widget .calendly-badge-content {
+  font-family: "Comfortaa", "Quicksand", "Figtree", ui-sans-serif, system-ui,
+    sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Calendly badge hover/active scaling */
+.calendly-badge-widget .calendly-badge-content {
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.calendly-badge-widget .calendly-badge-content:hover,
+.calendly-badge-widget .calendly-badge-content:focus-visible {
+  transform: scale(1.06);
+}
+
+.calendly-badge-widget .calendly-badge-content:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendly-badge-widget .calendly-badge-content {
+    transition: none;
+  }
+}

@@ -10,7 +10,7 @@ const logos = [
   { src: "/Trustee4.png", alt: "" },
   //   { src: "/Trustee5.png", alt: "" },
   { src: "/Trustee6.png", alt: "" },
-  //   { src: "/Trustee7.png", alt: "" },
+  { src: "/Trustee7.png", alt: "" },
 ];
 
 export default function GoodCompany() {
@@ -22,15 +22,16 @@ export default function GoodCompany() {
 
     let animationId;
     let position = 0;
-    const speed = 0.75; // pixels per frame 
+    const speed = 0.75; // pixels per frame
 
     const animate = () => {
       position -= speed;
 
-      // Reset position when we've scrolled one complete set of logos
+      // Calculate the width of one complete set of logos
       const logoWidth = 120 + 48; // logo width + gap
       const totalWidth = logoWidth * logos.length;
 
+      // When we've scrolled one complete set, reset to create seamless loop
       if (position <= -totalWidth) {
         position = 0;
       }
@@ -61,8 +62,8 @@ export default function GoodCompany() {
 
         {/* Marquee Container */}
         <div className="flex gap-12 whitespace-nowrap" ref={marqueeRef}>
-          {/* Create 10 sets of logos for longer marquee */}
-          {Array.from({ length: 10 }, (_, setIndex) =>
+          {/* Create multiple sets of logos for seamless infinite scrolling */}
+          {Array.from({ length: 3 }, (_, setIndex) =>
             logos.map((logo, index) => (
               <div
                 key={`set-${setIndex}-${index}`}
