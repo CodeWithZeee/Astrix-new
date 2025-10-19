@@ -49,7 +49,7 @@ const Industries = () => {
         imageUrl="Chatbot3.jpg"
       />
       <Card
-        heading="Voice assistants "
+        heading="AI Calling Agent"
         description="We develop advanced voice-based AI assistants that seamlessly handle inbound customer calls and provide personalised support, 24/7."
         imageUrl="voice_assistant.jpg"
       />
