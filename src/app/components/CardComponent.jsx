@@ -20,12 +20,12 @@ export default function Card({
         {/* Content */}
         <div className="relative w-full h-full">
           {/* Heading */}
-          <h2 className="absolute left-8 bottom-8 m-0 font-normal uppercase tracking-wide text-2xl transition-all duration-300 ease-out delay-300 group-hover:bottom-56 group-hover:delay-0">
+          <h2 className="absolute left-8 bottom-8 m-0 font-extrabold uppercase tracking-wide text-2xl transition-all duration-300 ease-out delay-300 group-hover:bottom-56 group-hover:delay-0">
             {heading}
           </h2>
 
           {/* Paragraph */}
-          <p className="absolute left-8 bottom-20 max-w-[80%] opacity-0 text-sm leading-relaxed transition-opacity duration-300 ease-out group-hover:opacity-100 group-hover:delay-100 group-hover:duration-500 group-hover:ease-in">
+          <p className="absolute font-extrabold text-white left-8 bottom-20 max-w-[80%] opacity-0 text-sm leading-relaxed transition-opacity duration-300 ease-out group-hover:opacity-100 group-hover:delay-100 group-hover:duration-500 group-hover:ease-in">
             {description}
           </p>
         </div>

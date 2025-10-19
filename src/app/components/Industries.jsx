@@ -46,7 +46,7 @@ const Industries = () => {
         <Card
         heading="Chatbots"
         description="We develop AI-powered customer support chatbots that provide instant helpful support, recommend products, and handle returns."
-        imageUrl="Chatbot3.jpg"
+        imageUrl="Chatbot99.jpg"
       />
       <Card
         heading="AI Calling Agent"
@@ -56,7 +56,7 @@ const Industries = () => {
       <Card
         heading="Automations"
         description="We automate inventory tracking, order management, and customer notifications to improve operational efficiency and reduce human error."
-        imageUrl="workflow3.png"
+        imageUrl="Automation.jpg"
       />
       </div>
     </div>

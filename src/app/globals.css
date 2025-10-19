@@ -37,7 +37,7 @@
 }
 
 .montserrat {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
 }
@@ -372,4 +372,25 @@ hr,
   .calendly-badge-widget .calendly-badge-content {
     transition: none;
   }
+}
+
+
+/* @font-face {
+  font-family: "Glock Grotesk";
+  src: url("/fonts/glock-grotesk/GlockGrotesk-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: "Glock Grotesk";
+  src: url("/fonts/Glock Grotesk Trial/TTF/GlockGrotesque-Medium.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.Glock{
+  font-family: "Glock Grotesk", sans-serif;
 }
