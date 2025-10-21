@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Switch = ({ checked, onChange }) => {
   const handleChange = (e) => {
@@ -11,9 +11,9 @@ const Switch = ({ checked, onChange }) => {
   return (
     <StyledWrapper>
       <label className="switch">
-        <input 
-          className="toggle" 
-          type="checkbox" 
+        <input
+          className="toggle"
+          type="checkbox"
           checked={checked || false}
           onChange={handleChange}
         />
@@ -22,7 +22,7 @@ const Switch = ({ checked, onChange }) => {
       </label>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .switch {
@@ -74,6 +74,7 @@ const StyledWrapper = styled.div`
 
   .toggle:checked + .slider:before {
     transform: translateX(32px);
-  }`;
+  }
+`;
 
 export default Switch;

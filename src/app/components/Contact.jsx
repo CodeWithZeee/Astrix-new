@@ -51,7 +51,7 @@ const SERVICES = [
   "AI Chatbot or Voice Agents",
   "Automation Workflows",
   "Performance Marketing",
-  "AI Consulting"
+  "AI Consulting",
 ];
 
 export default function ContactForm() {
@@ -197,10 +197,7 @@ export default function ContactForm() {
                   </FormDescription>
                 </div>
                 <FormControl>
-                  <Switch1
-                    checked={field.value}
-                    onChange={field.onChange}
-                  />
+                  <Switch1 checked={field.value} onChange={field.onChange} />
                 </FormControl>
               </FormItem>
             )}
