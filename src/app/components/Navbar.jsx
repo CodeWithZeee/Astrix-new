@@ -18,19 +18,19 @@ const Navbar = () => {
     },
     {
       name: "Services",
-      href: "#Services",
+      href: "/#Services",
     },
     {
       name: "Industries",
-      href: "#Industries",
+      href: "/#Industries",
     },
     {
       name: "Pricing",
-      href: "#PricingPlans",
+      href: "/#PricingPlans",
     },
     {
       name: "FAQ",
-      href: "#FAQ",
+      href: "/#FAQ",
     },
   ];
 
