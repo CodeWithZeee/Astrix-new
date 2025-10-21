@@ -51,7 +51,7 @@ const FAQAccordion = () => {
     };
 
     return (
-      <li className="bg-[#0d0d0d] my-2 shadow-lg  rounded-2xl border border-purple-500 p-4">
+      <li className="bg-[#0d0d0d] my-2 shadow-lg hover:border-purple-700/40  rounded-2xl border border-purple-500 p-4">
         <h2
           onClick={toggleAccordion}
           className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"

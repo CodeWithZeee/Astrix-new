@@ -9,7 +9,7 @@ export const LoadingProvider = ({ children }) => {
 
   useEffect(() => {
     // Simulate a short loading period; replace with your real loading logic if needed
-    const t = setTimeout(() => setIsLoadingComplete(true), 250);
+    const t = setTimeout(() => setIsLoadingComplete(true), 150);
     return () => clearTimeout(t);
   }, []);
 

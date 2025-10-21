@@ -33,7 +33,8 @@ const LoadingPage = () => {
         }
 
         .logo-blink {
-          animation: logoBlink 1.5s ease-in-out infinite;
+          animation: logoBlink 1.5s ease-in-out 0s infinite;
+          animation-fill-mode: both;
         }
 
         @keyframes fadeInOut {

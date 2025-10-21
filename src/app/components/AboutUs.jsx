@@ -3,14 +3,15 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col justify-center items-center text-white py-8 mx-4 bg-transparent ">
-      {/* Small Label */}
-      <p className="border border-white/20 text-sm px-8 py-1 rounded-full mb-8">
+    <>
+    <section className="flex flex-col justify-center items-center text-white py-6 sm:py-8 mx-2 sm:mx-4 bg-transparent ">
+      <p className="border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
         About us
       </p>
 
+
       {/* Main Text */}
-      <div className="max-w-3xl text-4xl font-semibold leading-snug text-justify">
+      <div className="max-w-3xl text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2 sm:p-3 md:p-4 leading-snug text-justify">
         <span className="">
           Hi, we're{" "}
           <span className="inline-flex items-center">
@@ -20,7 +21,7 @@ const AboutUs = () => {
               alt="Astrix Logo"
               width={42}
               height={32}
-              className="mx-2 inline-block"
+              className="mx-1 sm:mx-2 inline-block w-6 h-auto sm:w-8 md:w-10 lg:w-[42px]"
             />
           </span>
         </span>
@@ -32,6 +33,7 @@ const AboutUs = () => {
         </span>
       </div>
     </section>
+    </>
   );
 };
 

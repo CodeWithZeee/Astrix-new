@@ -33,7 +33,7 @@ const Hero = () => {
         {/* Top-right orangish gradient glow */}
         <div className="pointer-events-none absolute -top-24 -right-24 h-[18rem] w-[18rem] sm:h-[14rem] sm:w-[24rem] lg:h-[36rem] lg:w-[36rem] rounded-full bg-gradient-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl"></div>
         {/* Your content here */}
-        <h1 className="gradienttxt figtree text-2xl sm:text-4xl md:text-5xl lg:text-6xl  flex justify-center items-center max-w-4xl  leading-tight">
+        <h1 className="gradienttxt figtree text-xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl  leading-tight">
           We elevate your business using Artificial Intelligence.
         </h1>
         <h2 className="text-base sm:text-lg md:text-xl flex justify-center items-center px-4">
