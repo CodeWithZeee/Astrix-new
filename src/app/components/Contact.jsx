@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Switch } from "@/components/ui/switch";
+import Switch1 from "./Switch1";
 import { submitForm } from "../../../lib/actions/form";
 import toast from "react-hot-toast";
 import { useState } from "react";
@@ -197,9 +197,9 @@ export default function ContactForm() {
                   </FormDescription>
                 </div>
                 <FormControl>
-                  <Switch
+                  <Switch1
                     checked={field.value}
-                    onCheckedChange={field.onChange}
+                    onChange={field.onChange}
                   />
                 </FormControl>
               </FormItem>
