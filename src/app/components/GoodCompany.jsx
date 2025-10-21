@@ -57,6 +57,8 @@ export default function GoodCompany() {
 
       <div className="relative w-1/2 sm:w-3/4 flex justify-center overflow-hidden group">
         {/* Fade overlays */}
+        <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
 
         {/* Marquee Container */}
         <div className="flex gap-12 whitespace-nowrap" ref={marqueeRef}>
