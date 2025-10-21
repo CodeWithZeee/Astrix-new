@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { LoadingProvider } from "./components/LoadingContext";
 import RevealAnimation from "./components/RevealAnimation";
+import LoadingPage from "./components/LoadingPage";
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         loop
         muted
       /> */}
+        <LoadingPage />
         <Toaster
           toastOptions={{
             position: "top-center",
