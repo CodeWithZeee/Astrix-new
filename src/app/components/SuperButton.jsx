@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default function SuperButton({ text = "Launch Now", onClick }) {
+export default function SuperButton({ text = "Get Started", onClick }) {
   const router = useRouter();
 
   const handleClick = () => {
