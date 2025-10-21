@@ -52,7 +52,7 @@ const PricingPlans = () => {
         </Link> */}
       </header>
 
-      <main className="max-w-6xl mx-auto pt-10 pb-36 px-4 sm:px-6 lg:px-8">
+      <main className="max-w-6xl mx-auto pt-10 pb-36 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-md mx-auto mb-14 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6">
             <span className="text-indigo-600">Flexible</span> Plans
@@ -66,7 +66,7 @@ const PricingPlans = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`w-full border flex-1 ${
+              className={`w-full hover:border-indigo-600  border flex-1 ${
                 plan.featured ? "p-6 sm:p-8" : "mt-8 p-6 sm:p-8"
               } ${plan.order} ${
                 plan.featured ? "text-gray-400" : "text-white"
@@ -161,9 +161,9 @@ const PricingPlans = () => {
                 ))}
               </ul>
 
-              <Link
-                href="#"
-                className={`flex justify-center items-center bg-indigo-600 rounded-full ${
+              {/* <Link
+                  href="/contact"
+                className={`flex justify-center items-center bg-indigo-600 rounded-full hover:scale-110 transition-all ${
                   plan.featured
                     ? "py-4 sm:py-6 text-lg sm:text-2xl"
                     : "py-3 sm:py-5 text-base sm:text-xl"
@@ -175,7 +175,7 @@ const PricingPlans = () => {
                   src="https://res.cloudinary.com/williamsondesign/arrow-right.svg"
                   alt="arrow"
                 />
-              </Link>
+              </Link> */}
             </div>
           ))}
         </div>

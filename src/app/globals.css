@@ -42,6 +42,15 @@
   font-weight: 400;
 }
 
+.gradienttxt{
+  background: linear-gradient(90deg, #e8e7e6, #241f1f, #0e0e0e, #151516);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAnimation 8s ease infinite;
+  background-size: 400% 400%;
+}
+
 .section-with-light {
   position: relative;
   overflow: hidden;

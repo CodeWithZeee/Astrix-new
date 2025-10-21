@@ -1,36 +1,24 @@
-import React from 'react';
-import styles from '../AnimatedButton.module.css';
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/moving-border";
 
-const AnimatedButton = ({ color = 'indigo', text = 'Hover' }) => {
+export default function MovingBorderDemo() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/contact");
+  };
+
   return (
-    <>
-      <div style={{ '--color': color }}>
-        <button className={styles.button}>
-          <span className={styles.text}>{text}</span>
-          <div className={styles.icon}>
-            <svg>
-              <use xlinkHref="#arrow-right"></use>
-            </svg>
-          </div>
-        </button>
-      </div>
-
-      {/* Hidden SVG definitions */}
-      <svg style={{ display: 'none' }}>
-        <symbol id="arrow-right" viewBox="0 0 20 10">
-          <path d="M14.84 0l-1.08 1.06 3.3 3.2H0v1.49h17.05l-3.3 3.2L14.84 10 20 5l-5.16-5z"></path>
-        </symbol>
-        <filter id="noiseFilter">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="1.8"
-            numOctaves="6"
-            stitchTiles="stitch"
-          ></feTurbulence>
-        </filter>
-      </svg>
-    </>
+    <div>
+      <Button
+        borderRadius="1.75rem"
+        className="bg-[bg-[#0a0a0a]] dark:bg-slate-900 text-white dark:text-white  dark:border-slate-800  hover:text-white hover:shadow-lg hover:scale-110  hover:shadow-slate-900/20 transition-all duration-300"
+        onClick={handleClick}
+      >
+        Get Started !
+      </Button>
+    </div>
   );
-};
-
-export default AnimatedButton;
+}

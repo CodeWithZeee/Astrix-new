@@ -17,7 +17,8 @@ const Calendly = () => {
           rootElement={rootRef.current}
           text="Schedule a meeting!"
           textColor="#ffffff"
-          color="#4f39f6"   
+          color="#4f39f6"
+          fontFamily="Gilroy"
         />
       )}
     </div>
