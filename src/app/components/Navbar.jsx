@@ -24,10 +24,10 @@ const Navbar = () => {
       name: "Industries",
       href: "/#Industries",
     },
-    {
-      name: "Pricing",
-      href: "/#PricingPlans",
-    },
+    // {
+    //   name: "Pricing",
+    //   href: "/#PricingPlans",
+    // },
     {
       name: "FAQ",
       href: "/#FAQ",

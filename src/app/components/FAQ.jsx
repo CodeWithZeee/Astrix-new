@@ -84,7 +84,7 @@ const FAQAccordion = () => {
 
   return (
     <div  className="leading-relaxed p-4">
-      <div id="FAQ" className="flex justify-center items-start my-2">
+      <div id="FAQ" className="flex justify-center items-start my-16">
         <div className="w-full sm:w-10/12 md:w-1/2 my-1">
           <h2 className="text-5xl text-center text-indigo-600">
             FAQ

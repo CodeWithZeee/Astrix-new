@@ -5,7 +5,6 @@ import Industries from "./components/Industries";
 import PricingPlans from "./components/PricingPlans";
 import FAQAccordion from "./components/FAQ";
 import Footer05Page from "../components/footer-05/footer-05";
-import StackedCardsFAQ from "../app/components/StackedCardsFAQ";
 import GoodCompany from "./components/GoodCompany";
 import AboutUs from "./components/AboutUs";
 import RevealAnimation from "./components/RevealAnimation";
@@ -36,9 +35,9 @@ export default function Home() {
 
       <Calendly />
 
-      <RevealAnimation delay={0.2}>
+      {/* <RevealAnimation delay={0.2}>
         <PricingPlans />
-      </RevealAnimation>
+      </RevealAnimation> */}
 
       <Calendly />
 
@@ -47,7 +46,6 @@ export default function Home() {
       </RevealAnimation> */}
 
       <FAQAccordion />
-      {/* <StackedCardsFAQ /> */}
       
       <Footer05Page />
     </>
