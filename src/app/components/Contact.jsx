@@ -17,11 +17,69 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import Switch1 from "./Switch1";
 import { submitForm } from "../../../lib/actions/form";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+
+// Country codes list
+const COUNTRY_CODES = [
+  { code: "+1", country: "US/CA" },
+  { code: "+44", country: "UK" },
+  { code: "+91", country: "India" },
+  { code: "+61", country: "Australia" },
+  { code: "+86", country: "China" },
+  { code: "+81", country: "Japan" },
+  { code: "+49", country: "Germany" },
+  { code: "+33", country: "France" },
+  { code: "+39", country: "Italy" },
+  { code: "+34", country: "Spain" },
+  { code: "+31", country: "Netherlands" },
+  { code: "+32", country: "Belgium" },
+  { code: "+41", country: "Switzerland" },
+  { code: "+46", country: "Sweden" },
+  { code: "+47", country: "Norway" },
+  { code: "+45", country: "Denmark" },
+  { code: "+358", country: "Finland" },
+  { code: "+353", country: "Ireland" },
+  { code: "+351", country: "Portugal" },
+  { code: "+30", country: "Greece" },
+  { code: "+48", country: "Poland" },
+  { code: "+420", country: "Czech Republic" },
+  { code: "+43", country: "Austria" },
+  { code: "+36", country: "Hungary" },
+  { code: "+40", country: "Romania" },
+  { code: "+7", country: "Russia/Kazakhstan" },
+  { code: "+82", country: "South Korea" },
+  { code: "+65", country: "Singapore" },
+  { code: "+60", country: "Malaysia" },
+  { code: "+66", country: "Thailand" },
+  { code: "+62", country: "Indonesia" },
+  { code: "+63", country: "Philippines" },
+  { code: "+84", country: "Vietnam" },
+  { code: "+971", country: "UAE" },
+  { code: "+966", country: "Saudi Arabia" },
+  { code: "+972", country: "Israel" },
+  { code: "+27", country: "South Africa" },
+  { code: "+55", country: "Brazil" },
+  { code: "+52", country: "Mexico" },
+  { code: "+54", country: "Argentina" },
+  { code: "+56", country: "Chile" },
+  { code: "+57", country: "Colombia" },
+  { code: "+51", country: "Peru" },
+  { code: "+20", country: "Egypt" },
+  { code: "+234", country: "Nigeria" },
+  { code: "+254", country: "Kenya" },
+  { code: "+233", country: "Ghana" },
+];
 
 // ✅ Schema
 const formSchema = z.object({
@@ -30,6 +88,12 @@ const formSchema = z.object({
     .min(3, { message: "Name must be at least 3 characters." })
     .max(50, { message: "Name must be less than 50 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
+  countryCode: z.string().min(1, { message: "Please select a country code." }),
+  phoneNumber: z
+    .string()
+    .min(7, { message: "Phone number must be at least 7 digits." })
+    .max(15, { message: "Phone number must be less than 15 digits." })
+    .regex(/^\d+$/, { message: "Phone number must contain only digits." }),
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." })
@@ -61,6 +125,8 @@ export default function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      countryCode: "",
+      phoneNumber: "",
       message: "",
       services: [],
       isConsentGiven: false,
@@ -120,6 +186,51 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
+
+          {/* Phone Number */}
+          <div className="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-3">
+            <FormField
+              control={form.control}
+              name="countryCode"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Country Code</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Code" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {COUNTRY_CODES.map((item) => (
+                        <SelectItem key={item.code} value={item.code}>
+                          {item.code} {item.country}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           {/* Message */}
           <FormField
@@ -192,8 +303,7 @@ export default function ContactForm() {
                 <div className="space-y-0.5">
                   <FormLabel className="text-base">Consent</FormLabel>
                   <FormDescription>
-                    Yes, I agree to receive texts and emails on my contact
-                    information.
+                    I consent to receive transactional messages from Astrix Digital Media on the number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
                   </FormDescription>
                 </div>
                 <FormControl>
