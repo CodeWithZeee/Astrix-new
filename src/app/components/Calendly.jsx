@@ -18,7 +18,7 @@ const Calendly = () => {
           text="Schedule a meeting!"
           textColor="#ffffff"
           color="#0f1e33"
-          fontFamily="Gilroy"
+          fontFamily="Comfortaa"
         />
       )}
     </div>
