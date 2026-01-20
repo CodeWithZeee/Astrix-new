@@ -95,9 +95,11 @@ const formSchema = z.object({
     .max(15, { message: "Phone number must be less than 15 digits." })
     .regex(/^\d+$/, { message: "Phone number must contain only digits." }),
   message: z
-    .string()
-    .min(10, { message: "Message must be at least 10 characters." })
-    .max(1000, { message: "Message must be less than 1000 characters." }),
+    .union([
+      z.string().max(1000, { message: "Message must be less than 1000 characters." }),
+      z.literal(""),
+    ])
+    .default(""),
   services: z
     .array(
       z.enum([
