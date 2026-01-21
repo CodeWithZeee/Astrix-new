@@ -30,7 +30,7 @@
 }
 
 .comfortaa {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif !important;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

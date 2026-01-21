@@ -155,7 +155,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8 comfortaa">
       <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center">
         Contact Us
       </h2>
@@ -163,7 +163,7 @@ export default function ContactForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6"
+          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6 comfortaa"
         >
           {/* Name */}
           <FormField
