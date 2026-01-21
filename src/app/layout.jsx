@@ -20,9 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${comfortaa.className} ${comfortaa.variable} antialiased`}
-      >
+      <body className={`${comfortaa.className} ${comfortaa.variable} antialiased`}>
         {/* <video
         className="absolute top-0 left-0 w-full h-full object-cover overflow-auto "
         src= "hero_vid.mp4"

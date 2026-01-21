@@ -7,8 +7,8 @@ import Image from "next/image";
 const Services = () => {
   return (
     <>
-      <section id="Services" className="relative montserrat">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl montserrat m-4 sm:m-8 lg:m-20 mt-10 text-center">
+      <section id="Services" className="relative">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl m-4 sm:m-8 lg:m-20 mt-10 text-center">
           Our <span className="text-indigo-600"> Services </span>
         </h2>
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-[18rem] w-[18rem] sm:h-[24rem] sm:w-[24rem] lg:h-[36rem] lg:w-[36rem] rounded-full bg-gradient-to-tr from-blue-400/40 via-blue-500/30 to-transparent blur-3xl"></div>

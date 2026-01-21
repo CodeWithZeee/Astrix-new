@@ -155,15 +155,15 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8 comfortaa">
-      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center">
+    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8 ">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center  ">
         Contact Us
       </h2>
 
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6 comfortaa"
+          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6"
         >
           {/* Name */}
           <FormField
@@ -171,7 +171,7 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-lg">Name</FormLabel>
+                <FormLabel className="text-md">Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your name" {...field} />
                 </FormControl>
@@ -186,7 +186,7 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-lg">Email</FormLabel>
+                <FormLabel className="text-md">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your email" {...field} />
                 </FormControl>
@@ -202,7 +202,7 @@ export default function ContactForm() {
               name="countryCode"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg">Country Code</FormLabel>
+                  <FormLabel className="text-md">Country Code</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger>
@@ -226,7 +226,7 @@ export default function ContactForm() {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-lg">Phone Number</FormLabel>
+                  <FormLabel className="text-md">Phone Number</FormLabel>
                   <FormControl>
                     <Input
                       type="tel"
@@ -246,7 +246,7 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-lg">Message</FormLabel>
+                <FormLabel className="text-md">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Write your message here..."
@@ -262,7 +262,7 @@ export default function ContactForm() {
           {/* Services (Checkbox group) */}
           <FormItem>
             <FormLabel
-              className={`text-lg ${
+              className={`text-md ${
                 form.formState.errors.services ? "text-red-500" : ""
               }`}
             >

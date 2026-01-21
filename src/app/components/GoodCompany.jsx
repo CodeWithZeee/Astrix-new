@@ -51,7 +51,7 @@ export default function GoodCompany() {
 
   return (
     <section className="relative w-full bg-[#0a0a0a] py-16 flex flex-col items-center overflow-hidden">
-      <h2 className="comfortaa text-4xl md:text-5xl mb-10 text-indigo-600 text-center">
+      <h2 className=" text-4xl md:text-5xl mb-10 text-indigo-600 text-center">
         Trusted By
       </h2>
 
@@ -77,7 +77,7 @@ export default function GoodCompany() {
                   className="object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
                 />
               </div>
-            ))
+            )),
           )}
         </div>
       </div>

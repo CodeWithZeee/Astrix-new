@@ -55,7 +55,7 @@ const Footer05Page = () => {
               ))}
             </ul>
             <br />
-             <span className="flex items-center gap-4 sm:gap-5 text-gray-400">
+            <span className="flex items-center gap-4 sm:gap-5 text-gray-400">
               <Link
                 href="https://www.instagram.com/astrix_digital_media/"
                 target="_blank"
@@ -86,14 +86,12 @@ const Footer05Page = () => {
               </Link>
             </span>
           </div>
-          <div className="py-6 sm:py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-4 sm:gap-y-5">
+          <div className="py-6 sm:py-8 flex flex-col-reverse sm:flex-row items-center justify-center gap-x-2 gap-y-4 sm:gap-y-5">
             {/* Copyright */}
-            <span className="text-xs sm:text-sm text-gray-400 text-center sm:text-left">
-              &copy; {new Date().getFullYear()} Copyright © 2025
-              astrixdigitalmedia.com | Powered by astrixdigitalmedia.com
+            <span className="text-xs sm:text-sm text-gray-400 text-center">
+              &copy; {new Date().getFullYear()} astrixdigitalmedia.com | Powered
+              by astrixdigitalmedia.com
             </span>
-            
-           
           </div>
         </div>
       </footer>
