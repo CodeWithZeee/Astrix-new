@@ -96,7 +96,9 @@ const formSchema = z.object({
     .regex(/^\d+$/, { message: "Phone number must contain only digits." }),
   message: z
     .union([
-      z.string().max(1000, { message: "Message must be less than 1000 characters." }),
+      z
+        .string()
+        .max(1000, { message: "Message must be less than 1000 characters." }),
       z.literal(""),
     ])
     .default(""),
@@ -107,10 +109,13 @@ const formSchema = z.object({
         "Automation Workflows",
         "Performance Marketing",
         "AI Consulting",
-      ])
+      ]),
     )
     .min(1, { message: "Select at least one service." }),
-  isConsentGiven: z.boolean().optional(),
+  isConsentGiven: z.boolean().refine((val) => val === true, {
+    message: "You must consent to receive transactional messages.",
+  }),
+  isMarketingConsentGiven: z.boolean().optional(),
 });
 
 const SERVICES = [
@@ -132,6 +137,7 @@ export default function ContactForm() {
       message: "",
       services: [],
       isConsentGiven: false,
+      isMarketingConsentGiven: false,
     },
   });
 
@@ -165,7 +171,7 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-lg">Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your name" {...field} />
                 </FormControl>
@@ -180,7 +186,7 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-lg">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your email" {...field} />
                 </FormControl>
@@ -196,7 +202,7 @@ export default function ContactForm() {
               name="countryCode"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Country Code</FormLabel>
+                  <FormLabel className="text-lg">Country Code</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger>
@@ -220,7 +226,7 @@ export default function ContactForm() {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel className="text-lg">Phone Number</FormLabel>
                   <FormControl>
                     <Input
                       type="tel"
@@ -240,7 +246,7 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="text-lg">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Write your message here..."
@@ -255,7 +261,13 @@ export default function ContactForm() {
 
           {/* Services (Checkbox group) */}
           <FormItem>
-            <FormLabel>Interested Services</FormLabel>
+            <FormLabel
+              className={`text-lg ${
+                form.formState.errors.services ? "text-red-500" : ""
+              }`}
+            >
+              Interested Services
+            </FormLabel>
             <FormDescription>
               Select the services you're interested in.
             </FormDescription>
@@ -280,7 +292,7 @@ export default function ContactForm() {
                                 field.onChange([...field.value, service]);
                               } else {
                                 field.onChange(
-                                  field.value.filter((s) => s !== service)
+                                  field.value.filter((s) => s !== service),
                                 );
                               }
                             }}
@@ -301,15 +313,56 @@ export default function ContactForm() {
             control={form.control}
             name="isConsentGiven"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
+              <FormItem
+                className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
+                  field.value ? "border-white" : ""
+                }`}
+              >
                 <div className="space-y-0.5">
-                  <FormLabel className="text-base">Consent</FormLabel>
+                  {/* <FormLabel className="text-base">
+                    Transactional Consent *
+                  </FormLabel> */}
                   <FormDescription>
-                    I consent to receive transactional messages from Astrix Digital Media on the number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
+                    I consent to receive transactional messages from Astrix
+                    Digital Media on the email & phone number provided. Message
+                    frequency may vary. Message & Data rates may apply. Reply
+                    HELP for help or STOP to opt-out.
                   </FormDescription>
                 </div>
                 <FormControl>
-                  <Switch1 checked={field.value} onChange={field.onChange} />
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="isMarketingConsentGiven"
+            render={({ field }) => (
+              <FormItem
+                className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
+                  field.value ? "border-white" : ""
+                }`}
+              >
+                <div className="space-y-0.5">
+                  {/* <FormLabel className="text-base">
+                    Marketing Consent (Optional)
+                  </FormLabel> */}
+                  <FormDescription>
+                    I consent to receive marketing and promotional messages from
+                    Astrix Digital Media at the email & phone number provided.
+                    Message frequency may vary. Message & Data rates may apply.
+                    Reply HELP for help or STOP to opt out.
+                  </FormDescription>
+                </div>
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
                 </FormControl>
               </FormItem>
             )}

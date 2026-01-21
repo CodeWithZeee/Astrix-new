@@ -8,13 +8,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-family-sans: var(--font-comfortaa, "Comfortaa"), "Comfortaa",
-    ui-sans-serif, system-ui, sans-serif;
-}
-
-:root {
-  /* Ensure custom font variables exist so font-sans uses Comfortaa */
-  --font-comfortaa: "Comfortaa";
+  --font-family-sans: var(--font-comfortaa), "comfortaa", ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 .quicksand {
