@@ -28,7 +28,7 @@ const Industries = () => {
   return (
     <div
       id="Industries"
-      className="montserrat flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+      className="comfortaa flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
     >
       <div className="section-with-light"></div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 text-center">

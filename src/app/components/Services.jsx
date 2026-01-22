@@ -11,7 +11,7 @@ const Services = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl m-4 sm:m-8 lg:m-20 mt-10 text-center">
           Our <span className="text-indigo-600"> Services </span>
         </h2>
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-[18rem] w-[18rem] sm:h-[24rem] sm:w-[24rem] lg:h-[36rem] lg:w-[36rem] rounded-full bg-gradient-to-tr from-blue-400/40 via-blue-500/30 to-transparent blur-3xl"></div>
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-[18rem] sm:h-96 sm:w-[24rem] lg:h-144 lg:w-xl rounded-full bg-linear-to-tr from-blue-400/40 via-blue-500/30 to-transparent blur-3xl"></div>
 
         {/* First row - Responsive grid */}
         <div className="flex flex-col lg:flex-row justify-center w-full px-4 sm:px-6 lg:px-6">

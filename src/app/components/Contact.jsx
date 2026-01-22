@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
-
+import Link from "next/link";
 import {
   Form,
   FormControl,
@@ -155,82 +155,108 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8 ">
-      <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center  ">
-        Contact Us
-      </h2>
+    <div className="relative max-w-xl mx-auto py-10 px-4 sm:px-6 lg:px-8 ">
+      {/* Background gradient spots */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-linear-to-br from-orange-500/30 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tl from-blue-500/30 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-linear-to-r from-purple-500/15 via-transparent to-purple-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6"
-        >
-          {/* Name */}
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Name</FormLabel>
-                <FormControl>
-                  <Input placeholder="Enter your name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+      <div className="relative z-10">
+        <h2 className="text-3xl sm:text-3xl font-semibold mb-6 text-center">
+          Contact Us
+        </h2>
 
-          {/* Email */}
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="Enter your email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Phone Number */}
-          <div className="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-3">
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-6 shadow-md rounded-2xl p-4 sm:p-6 border-2"
+          >
+            {/* Name */}
             <FormField
               control={form.control}
-              name="countryCode"
+              name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-md">Country Code</FormLabel>
-                  <Select onValueChange={field.onChange} value={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Code" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {COUNTRY_CODES.map((item) => (
-                        <SelectItem key={item.code} value={item.code}>
-                          {item.code} {item.country}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <FormLabel className="text-md">Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Enter your name" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Email */}
             <FormField
               control={form.control}
-              name="phoneNumber"
+              name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-md">Phone Number</FormLabel>
+                  <FormLabel className="text-md">Email</FormLabel>
                   <FormControl>
-                    <Input
-                      type="tel"
-                      placeholder="Enter your phone number"
+                    <Input placeholder="Enter your email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            {/* Phone Number */}
+            <div className="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-3">
+              <FormField
+                control={form.control}
+                name="countryCode"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-md">Country Code</FormLabel>
+                    <Select onValueChange={field.onChange} value={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Code" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {COUNTRY_CODES.map((item) => (
+                          <SelectItem key={item.code} value={item.code}>
+                            {item.code} {item.country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phoneNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-md">Phone Number</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            {/* Message */}
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-md">Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Write your message here..."
+                      rows={4}
                       {...field}
                     />
                   </FormControl>
@@ -238,148 +264,149 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-          </div>
 
-          {/* Message */}
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Message</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Write your message here..."
-                    rows={4}
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Services (Checkbox group) */}
-          <FormItem>
-            <FormLabel
-              className={`text-md ${
-                form.formState.errors.services ? "text-red-500" : ""
-              }`}
-            >
-              Interested Services
-            </FormLabel>
-            <FormDescription>
-              Select the services you're interested in.
-            </FormDescription>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-              {SERVICES.map((service) => (
-                <Controller
-                  key={service}
-                  name="services"
-                  control={form.control}
-                  render={({ field }) => {
-                    const checked = field.value.includes(service);
-                    return (
-                      <FormItem
-                        className="flex items-center space-x-2"
-                        key={service}
-                      >
-                        <FormControl>
-                          <Checkbox
-                            checked={checked}
-                            onCheckedChange={(value) => {
-                              if (value) {
-                                field.onChange([...field.value, service]);
-                              } else {
-                                field.onChange(
-                                  field.value.filter((s) => s !== service),
-                                );
-                              }
-                            }}
-                          />
-                        </FormControl>
-                        <FormLabel className="font-normal">{service}</FormLabel>
-                      </FormItem>
-                    );
-                  }}
-                />
-              ))}
-            </div>
-            <FormMessage name="services" />
-          </FormItem>
-
-          {/* Consent */}
-          <FormField
-            control={form.control}
-            name="isConsentGiven"
-            render={({ field }) => (
-              <FormItem
-                className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
-                  field.value ? "border-white" : ""
+            {/* Services (Checkbox group) */}
+            <FormItem>
+              <FormLabel
+                className={`text-md ${
+                  form.formState.errors.services ? "text-red-500" : ""
                 }`}
               >
-                <div className="space-y-0.5">
-                  {/* <FormLabel className="text-base">
+                Interested Services
+              </FormLabel>
+              <FormDescription>
+                Select the services you're interested in.
+              </FormDescription>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                {SERVICES.map((service) => (
+                  <Controller
+                    key={service}
+                    name="services"
+                    control={form.control}
+                    render={({ field }) => {
+                      const checked = field.value.includes(service);
+                      return (
+                        <FormItem
+                          className="flex items-center space-x-2"
+                          key={service}
+                        >
+                          <FormControl>
+                            <Checkbox
+                              checked={checked}
+                              onCheckedChange={(value) => {
+                                if (value) {
+                                  field.onChange([...field.value, service]);
+                                } else {
+                                  field.onChange(
+                                    field.value.filter((s) => s !== service),
+                                  );
+                                }
+                              }}
+                            />
+                          </FormControl>
+                          <FormLabel className="font-normal">
+                            {service}
+                          </FormLabel>
+                        </FormItem>
+                      );
+                    }}
+                  />
+                ))}
+              </div>
+              <FormMessage name="services" />
+            </FormItem>
+
+            {/* Consent */}
+            <FormField
+              control={form.control}
+              name="isConsentGiven"
+              render={({ field }) => (
+                <FormItem
+                  className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
+                    field.value ? "border-white" : ""
+                  }`}
+                >
+                  <div className="space-y-0.5">
+                    {/* <FormLabel className="text-base">
                     Transactional Consent *
                   </FormLabel> */}
-                  <FormDescription>
-                    I consent to receive transactional messages from Astrix
-                    Digital Media on the email & phone number provided. Message
-                    frequency may vary. Message & Data rates may apply. Reply
-                    HELP for help or STOP to opt-out.
-                  </FormDescription>
-                </div>
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
-                </FormControl>
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="isMarketingConsentGiven"
-            render={({ field }) => (
-              <FormItem
-                className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
-                  field.value ? "border-white" : ""
-                }`}
-              >
-                <div className="space-y-0.5">
-                  {/* <FormLabel className="text-base">
+                    <FormDescription>
+                      I consent to receive transactional messages from Astrix
+                      Digital Media on the email & phone number provided.
+                      Message frequency may vary. Message & Data rates may
+                      apply. Reply HELP for help or STOP to opt-out.
+                    </FormDescription>
+                  </div>
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="isMarketingConsentGiven"
+              render={({ field }) => (
+                <FormItem
+                  className={`flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm ${
+                    field.value ? "border-white" : ""
+                  }`}
+                >
+                  <div className="space-y-0.5">
+                    {/* <FormLabel className="text-base">
                     Marketing Consent (Optional)
                   </FormLabel> */}
-                  <FormDescription>
-                    I consent to receive marketing and promotional messages from
-                    Astrix Digital Media at the email & phone number provided.
-                    Message frequency may vary. Message & Data rates may apply.
-                    Reply HELP for help or STOP to opt out.
-                  </FormDescription>
-                </div>
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
-                </FormControl>
-              </FormItem>
-            )}
-          />
+                    <FormDescription>
+                      I consent to receive marketing and promotional messages
+                      from Astrix Digital Media at the email & phone number
+                      provided. Message frequency may vary. Message & Data rates
+                      may apply. Reply HELP for help or STOP to opt out.
+                    </FormDescription>
+                  </div>
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
 
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? (
-              <div className="flex items-center justify-center">
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Submitting...
-              </div>
-            ) : (
-              "Submit"
-            )}
-          </Button>
-        </form>
-      </Form>
+            {/* Privacy and Terms */}
+             <span className="flex justify-center items-center gap-2 sm:gap-2">
+            <Link
+              href="/terms"
+              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Terms and conditions
+            </Link>
+            <span className="text-gray-400"> | </span>
+            <Link
+              href="/privacy"
+              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </span>
+
+            {/* Submit Button */}
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? (
+                <div className="flex items-center justify-center">
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Submitting...
+                </div>
+              ) : (
+                "Submit"
+              )}
+            </Button>
+          </form>
+        </Form>
+      </div>
     </div>
   );
 }

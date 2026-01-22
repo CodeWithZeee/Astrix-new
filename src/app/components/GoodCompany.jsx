@@ -51,14 +51,14 @@ export default function GoodCompany() {
 
   return (
     <section className="relative w-full bg-[#0a0a0a] py-16 flex flex-col items-center overflow-hidden">
-      <h2 className=" text-4xl md:text-5xl mb-10 text-indigo-600 text-center">
-        Trusted By
+      <h2 className=" text-4xl md:text-5xl mb-10 text-indigo-600 text-center font-semibold">
+        Trusted <span className="text-white">By</span>
       </h2>
 
       <div className="relative w-1/2 sm:w-3/4 flex justify-center overflow-hidden group">
         {/* Fade overlays */}
-        <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 h-full w-16 bg-linear-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-16 bg-linear-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
 
         {/* Marquee Container */}
         <div className="flex gap-12 whitespace-nowrap" ref={marqueeRef}>
@@ -67,7 +67,7 @@ export default function GoodCompany() {
             logos.map((logo, index) => (
               <div
                 key={`set-${setIndex}-${index}`}
-                className="flex-shrink-0 transition-transform duration-300 hover:scale-105"
+                className="shrink-0 transition-transform duration-300 hover:scale-105"
               >
                 <Image
                   src={logo.src}

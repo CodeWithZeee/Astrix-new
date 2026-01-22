@@ -29,7 +29,7 @@ const footerLinks = [
 const Footer05Page = () => {
   return (
     <div className="w-full bg-[#0a0a0a]">
-      <div className="w-full h-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+      <div className="w-full h-1 bg-linear-to-r from-transparent via-gray-600 to-transparent"></div>
       <footer className="bg-[#0a0a0a] w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-8 sm:py-12 flex flex-col justify-start items-center">
@@ -42,7 +42,7 @@ const Footer05Page = () => {
               className="h-6 sm:h-8 w-auto"
             />
 
-            <ul className="mt-4 sm:mt-6 flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
+            {/* <ul className="mt-4 sm:mt-6 flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
               {footerLinks.map(({ title, href }) => (
                 <li key={title}>
                   <Link
@@ -53,7 +53,7 @@ const Footer05Page = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <br />
             <span className="flex items-center gap-4 sm:gap-5 text-gray-400">
               <Link
@@ -86,6 +86,21 @@ const Footer05Page = () => {
               </Link>
             </span>
           </div>
+          <span className="flex justify-center items-center gap-2 sm:gap-2">
+            <Link
+              href="/terms"
+              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Terms and conditions
+            </Link>
+            <span className="text-gray-400"> | </span>
+            <Link
+              href="/privacy"
+              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </span>
           <div className="py-6 sm:py-8 flex flex-col-reverse sm:flex-row items-center justify-center gap-x-2 gap-y-4 sm:gap-y-5">
             {/* Copyright */}
             <span className="text-xs sm:text-sm text-gray-400 text-center">

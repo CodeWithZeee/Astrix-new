@@ -17,21 +17,21 @@ const Navbar = () => {
       href: "/contact",
     },
     {
-      name: "Services",
-      href: "/#Services",
+      name: "Privacy",
+      href: "/privacy",
     },
     {
-      name: "Industries",
-      href: "/#Industries",
+      name: "Terms",
+      href: "/terms",
     },
     // {
     //   name: "Pricing",
     //   href: "/#PricingPlans",
     // },
-    {
-      name: "FAQ",
-      href: "/#FAQ",
-    },
+    // {
+    //   name: "FAQ",
+    //   href: "/#FAQ",
+    // },
   ];
 
   const toggleMenu = () => {
