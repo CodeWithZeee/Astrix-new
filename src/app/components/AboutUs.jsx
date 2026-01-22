@@ -21,16 +21,19 @@ const AboutUs = () => {
               alt="Astrix Logo"
               width={42}
               height={32}
-              className="mx-1 sm:mx-2 inline-block w-6 h-auto sm:w-8 md:w-10 lg:w-[42px]"
+              className="mx-1 sm:mx-2 inline-block w-6 h-auto sm:w-8 md:w-10 lg:w-10.5"
             />
           </span>
         </span>
         <span className="">
           We craft cutting-edge AI solutions to make organizations more
-          effective and competitive. At Astrix, we bridge innovation and
-          intelligence -{""} designing AI systems that help businesses operate
-          smarter, faster, and at scale.
+          effective and competitive. 
         </span>
+        <div className="pt-4">
+          At Astrix, we bridge innovation and
+          intelligence -{""} designing AI systems that help businesses operate
+          smarter, faster, and at scale
+        </div>
       </div>
     </section>
     </>
