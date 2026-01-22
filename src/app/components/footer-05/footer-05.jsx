@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/app/components/ui/separator";
 import { Instagram, Linkedin, TwitterIcon, Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

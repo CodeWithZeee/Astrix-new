@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "@/app/components/ui/moving-border";
 
 export default function MovingBorderDemo() {
   const router = useRouter();

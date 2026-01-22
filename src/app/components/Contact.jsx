@@ -12,20 +12,19 @@ import {
   FormLabel,
   FormMessage,
   FormDescription,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+} from "@/app/components/ui/form";
+import { Input } from "@/app/components/ui/input";
+import { Textarea } from "@/app/components/ui/textarea";
+import { Button } from "@/app/components/ui/button";
+import { Checkbox } from "@/app/components/ui/checkbox";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/app/components/ui/select";
 import Switch1 from "./Switch1";
-import { submitForm } from "../../../lib/actions/form";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
@@ -144,12 +143,46 @@ export default function ContactForm() {
   const onSubmit = async (values) => {
     setIsLoading(true);
     try {
-      const response = await submitForm(values);
-      toast.success(response.message);
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+          countryCode: values.countryCode,
+          phoneNumber: values.phoneNumber,
+          services: values.services,
+          isConsentGiven: values.isConsentGiven,
+          isMarketingConsentGiven: values.isMarketingConsentGiven,
+        }),
+      });
+
+      const contentType = response.headers.get("content-type") || "";
+
+      if (!response.ok) {
+        const errorData = contentType.includes("application/json")
+          ? await response.json()
+          : { error: await response.text() };
+        throw new Error(errorData.error || "Failed to submit form");
+      }
+
+      const data = contentType.includes("application/json")
+        ? await response.json()
+        : await response.text();
+
+      toast.success("Form submitted successfully!");
       form.reset();
-      setIsLoading(false);
     } catch (error) {
-      toast.error("Failed to submit form.");
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Failed to submit form. Please try again.";
+      toast.error(errorMessage);
+      console.error("Form submission error:", error);
+    } finally {
       setIsLoading(false);
     }
   };
@@ -377,21 +410,21 @@ export default function ContactForm() {
             />
 
             {/* Privacy and Terms */}
-             <span className="flex justify-center items-center gap-2 sm:gap-2">
-            <Link
-              href="/terms"
-              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Terms and conditions
-            </Link>
-            <span className="text-gray-400"> | </span>
-            <Link
-              href="/privacy"
-              className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-          </span>
+            <span className="flex justify-center items-center gap-2 sm:gap-2">
+              <Link
+                href="/terms"
+                className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+              >
+                Terms and conditions
+              </Link>
+              <span className="text-gray-400"> | </span>
+              <Link
+                href="/privacy"
+                className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </span>
 
             {/* Submit Button */}
             <Button type="submit" className="w-full" disabled={isLoading}>
