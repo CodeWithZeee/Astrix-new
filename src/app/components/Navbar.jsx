@@ -41,13 +41,15 @@ const Navbar = () => {
   return (
     <nav className="relative">
       <div className="mx-4 sm:mx-6 lg:mx-10 my-5 bg-transparent backdrop-blur rounded-3xl h-16 flex items-center px-4 overflow-hidden fixed top-0 left-0 right-0 z-50">
-        <Image
-          src="/Astrix_logo.png"
-          alt="Astrix Digital Media"
-          width={70}
-          height={50}
-          className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
-        />
+        <Link href="/">
+          <Image
+            src="/Astrix_logo.png"
+            alt="Astrix Digital Media"
+            width={70}
+            height={50}
+            className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex mx-10 ml-auto items-center gap-4">
