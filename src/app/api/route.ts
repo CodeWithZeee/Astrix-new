@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         phoneNumber: phoneNumber || null,
         services: Array.isArray(services) ? services : [],
         isConsentGiven: Boolean(isConsentGiven),
-        // not in schema, kept for parity but ignored
+        isMarketingConsentGiven: Boolean(isMarketingConsentGiven),
       },
     });
 
