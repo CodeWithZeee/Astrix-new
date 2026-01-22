@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         phoneNumber: phoneNumber || null,
         services: Array.isArray(services) ? services : [],
         isConsentGiven: Boolean(isConsentGiven),
-        isMarketingConsentGiven: Boolean(isMarketingConsentGiven),
+        // not in schema, kept for parity but ignored
       },
     });
 
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     try {
       await resend.emails.send({
         from: "Astrix Digital Media <contact@astrixdigitalmedia.com>",
-        to: ["zaidbhai958@gmail.com"],
+        to: ["obaidahmadexec@gmail.com"],
         replyTo: email,
         subject: "New Contact Form Submission",
         html: `
