@@ -34,12 +34,11 @@ const Hero = () => {
         {/* Top-right orangish gradient glow */}
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-[18rem] sm:h-56 sm:w-[24rem] lg:h-144 lg:w-xl rounded-full bg-linear-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl"></div>
         {/* Your content here */}
-        <h1 className="gradienttxt comfortaa text-xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl leading-tight">
-          We elevate your business using Artificial Intelligence.
+        <h1 className="gradienttxt comfortaa text-3xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl leading-tight">
+          Fix your business growth bottlenecks using AI, automation and smarter systems.
         </h1>
-        <h2 className="text-base sm:text-lg md:text-xl flex justify-center items-center px-4">
-          We elevate and grow organizations using top-tier Artificial
-          Intelligence solutions.
+        <h2 className=" flex justify-center items-center px-4 max-w-3xl text-gray-500 ">
+          Astrix works as a strategic partner to help businesses capture more opportunities, respond fast, reduce operational friction and scale revenue-generating conversations across marketing, sales, and operations.
         </h2>
         {/* <SuperButton /> */}
         <AnimatedButton />

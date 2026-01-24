@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   ];
 
   return (
-    <main className="pt-12 min-h-screen bg-background text-foreground">
+    <main className="pt-14 min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="border-b border-border/40 py-8 md:py-12 bg-background/50 backdrop-blur-sm">
         <div className="mx-auto max-w-4xl px-4 md:px-8">
