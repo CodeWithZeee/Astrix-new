@@ -74,7 +74,7 @@ export default function GoodCompany() {
                   alt={logo.alt}
                   width={120}
                   height={60}
-                  className="object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
+                  className="object-contain opacity-100 md:opacity-70 md:hover:opacity-100 md:grayscale md:hover:grayscale-0"
                 />
               </div>
             )),

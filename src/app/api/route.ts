@@ -43,7 +43,7 @@ export async function POST(req: Request) {
     try {
       await resend.emails.send({
         from: "Astrix Digital Media <contact@astrixdigitalmedia.com>",
-        to: ["obaidahmadexec@gmail.com", "mohdzaid49272@gmail.com"],
+        to: [ "mohdzaid49272@gmail.com"],
         replyTo: email,
         subject: "New Contact Form Submission",
         html: `

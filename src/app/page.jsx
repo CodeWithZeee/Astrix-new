@@ -6,9 +6,11 @@ import PricingPlans from "./components/PricingPlans";
 import FAQAccordion from "./components/FAQ";
 import Footer05Page from "./components/footer-05/footer-05";
 import GoodCompany from "./components/GoodCompany";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/OurPhilosophy";
 import RevealAnimation from "./components/RevealAnimation";
 import Calendly from "./components/Calendly";
+import ProblemsWeSolve from "./components/ProblemsWeSolve";
+
 
 export default function Home() {
   return (
@@ -19,6 +21,10 @@ export default function Home() {
 
       <RevealAnimation delay={0.1}>
         <AboutUs />
+      </RevealAnimation>
+
+      <RevealAnimation delay={0.1}>
+        <ProblemsWeSolve />
       </RevealAnimation>
 
        <RevealAnimation delay={0.2}>
