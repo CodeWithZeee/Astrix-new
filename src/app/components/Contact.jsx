@@ -86,10 +86,11 @@ const formSchema = z.object({
     .string()
     .min(3, { message: "Name must be at least 3 characters." })
     .max(50, { message: "Name must be less than 50 characters." }),
-  email: z.string().email({ message: "Invalid email address." }),
+  email: z.string().trim().email({ message: "Invalid email address." }),
   countryCode: z.string().min(1, { message: "Please select a country code." }),
   phoneNumber: z
     .string()
+    .trim()
     .min(7, { message: "Phone number must be at least 7 digits." })
     .max(15, { message: "Phone number must be less than 15 digits." })
     .regex(/^\d+$/, { message: "Phone number must contain only digits." }),
@@ -111,9 +112,7 @@ const formSchema = z.object({
       ]),
     )
     .min(1, { message: "Select at least one service." }),
-  isConsentGiven: z.boolean().refine((val) => val === true, {
-    message: "You must consent to receive transactional messages.",
-  }),
+  isConsentGiven: z.boolean().optional(),
   isMarketingConsentGiven: z.boolean().optional(),
 });
 
@@ -364,10 +363,7 @@ export default function ContactForm() {
                     Transactional Consent *
                   </FormLabel> */}
                     <FormDescription>
-                      I consent to receive transactional messages from Astrix
-                      Digital Media on the email & phone number provided.
-                      Message frequency may vary. Message & Data rates may
-                      apply. Reply HELP for help or STOP to opt-out.
+                      I consent to receive transactional messages from Astrix Digital Media on the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -393,10 +389,7 @@ export default function ContactForm() {
                     Marketing Consent (Optional)
                   </FormLabel> */}
                     <FormDescription>
-                      I consent to receive marketing and promotional messages
-                      from Astrix Digital Media at the email & phone number
-                      provided. Message frequency may vary. Message & Data rates
-                      may apply. Reply HELP for help or STOP to opt out.
+                      I consent to receive marketing and promotional messages from Astrix Digital Media at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out.
                     </FormDescription>
                   </div>
                   <FormControl>

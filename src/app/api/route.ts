@@ -34,15 +34,16 @@ export async function POST(req: Request) {
         phoneNumber: phoneNumber || null,
         services: Array.isArray(services) ? services : [],
         isConsentGiven: Boolean(isConsentGiven),
-        // not in schema, kept for parity but ignored
+        isMarketingConsentGiven: Boolean(isMarketingConsentGiven),
       },
     });
 
     // Fire-and-forget email; failure should not block response
+    // obaidahmadexec
     try {
       await resend.emails.send({
         from: "Astrix Digital Media <contact@astrixdigitalmedia.com>",
-        to: ["obaidahmadexec@gmail.com"],
+        to: ["obaidahmadexec@gmail.com", "mohdzaid49272@gmail.com"],
         replyTo: email,
         subject: "New Contact Form Submission",
         html: `

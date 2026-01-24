@@ -71,7 +71,7 @@ const Footer05Page = () => {
                 <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
               <Link
-                href="#"
+                href="https://x.com/astrix_digital"
                 target="_blank"
                 className="hover:text-white transition-colors"
               >
