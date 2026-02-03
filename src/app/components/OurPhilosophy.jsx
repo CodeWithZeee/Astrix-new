@@ -85,7 +85,7 @@ const AboutUs = () => {
   return (
     <>
       <section className="flex flex-col justify-center items-center text-white py-6 sm:py-8 mx-2 sm:mx-4 bg-transparent ">
-        <p className="border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
+        <p className="text-white/70 border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
           OUR PHILOSOPHY
         </p>
 

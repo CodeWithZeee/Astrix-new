@@ -15,10 +15,10 @@ export default function ProblemsWeSolve() {
     <section className="relative py-20 px-4 sm:px-8 text-white">
       {/* subtle background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-500/10 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-400/10 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl flex flex-col items-center">
         {/* Section label */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -36,14 +36,17 @@ export default function ProblemsWeSolve() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="mb-10 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight"
+          className="mb-10 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight text-center"
         >
           Most businesses don't struggle because they lack tools —
-          <span className="text-white/70"> they struggle because systems break silently.</span>
+          <span className="text-white/70">
+            {" "}
+            they struggle because systems break silently.
+          </span>
         </motion.h2>
 
         {/* Problems list */}
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="w-full grid gap-4 sm:grid-cols-2 max-w-3xl">
           {problems.map((problem, i) => (
             <motion.div
               key={i}
@@ -51,10 +54,10 @@ export default function ProblemsWeSolve() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group relative rounded-xl border border-white/10 bg-white/2 p-5 transition-all duration-300 hover:border-sky-400/40 hover:bg-white/4"
+              className="group relative rounded-xl border border-white/10 bg-white/2 p-5 transition-all duration-300 hover:border-purple-400/40 hover:bg-white/4"
             >
               {/* accent dot */}
-              <span className="absolute left-0 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <span className="absolute left-0 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               <p className="text-white/80 group-hover:text-white transition-colors">
                 {problem}
@@ -69,12 +72,12 @@ export default function ProblemsWeSolve() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14 max-w-3xl border-l-2 border-sky-400/40 pl-6"
+          className="mt-14 max-w-3xl text-center"
         >
           <p className="text-lg text-white/90">
             These problems aren't solved by adding another tool.
           </p>
-          <p className="mt-2 text-lg font-medium bg-linear-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent">
+          <p className="mt-2 text-lg font-medium bg-linear-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
             They're solved by better business fundamentals.
           </p>
         </motion.div>
@@ -82,4 +85,3 @@ export default function ProblemsWeSolve() {
     </section>
   );
 }
-

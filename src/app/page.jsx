@@ -1,15 +1,13 @@
-import Image from "next/image";
-import Services from "./components/Services";
+import Services from "./components/OurCoreServices";
 import Hero from "./components/Hero";
-import Industries from "./components/Industries";
-import PricingPlans from "./components/PricingPlans";
+import WhoWeWorkWith from "./components/WhoWeWorkWith";
 import FAQAccordion from "./components/FAQ";
 import Footer05Page from "./components/footer-05/footer-05";
 import GoodCompany from "./components/GoodCompany";
 import AboutUs from "./components/OurPhilosophy";
 import RevealAnimation from "./components/RevealAnimation";
-import Calendly from "./components/Calendly";
 import ProblemsWeSolve from "./components/ProblemsWeSolve";
+import HowWeWork from "./components/HowWeWork";
 
 
 export default function Home() {
@@ -27,6 +25,10 @@ export default function Home() {
         <ProblemsWeSolve />
       </RevealAnimation>
 
+      <RevealAnimation delay={0.1}>
+        <HowWeWork />
+      </RevealAnimation>
+
        <RevealAnimation delay={0.2}>
         <GoodCompany />
       </RevealAnimation>
@@ -36,16 +38,12 @@ export default function Home() {
       </RevealAnimation>
 
       <RevealAnimation delay={0.1}>
-        <Industries />
+        <WhoWeWorkWith />
       </RevealAnimation>
-
-      <Calendly />
 
       {/* <RevealAnimation delay={0.2}>
         <PricingPlans />
       </RevealAnimation> */}
-
-      <Calendly />
 
       {/* <RevealAnimation delay={0.1}>
          <div className="pointer-events-none absolute -top-24 -right-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl max-w-screen"></div>

@@ -125,6 +125,7 @@ const SERVICES = [
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const redirectUrl = "https://ai.automationastrix.com/widget/booking/ldUWZEMuCZLT7aJQx4xB";
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -173,6 +174,7 @@ export default function ContactForm() {
         : await response.text();
 
       toast.success("Form submitted successfully!");
+      window.location.href = redirectUrl;
       form.reset();
     } catch (error) {
       const errorMessage =
