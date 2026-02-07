@@ -103,16 +103,16 @@ export default function OurCoreServices() {
   ];
 
   return (
-    <section className="py-20 px-6 sm:px-8 lg:px-12">
+    <section className={" py-20 px-6 sm:px-8 lg:px-12"}>
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center flex flex-col items-center">
           <p className="text-white/70 border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
             OUR CORE SERVICES
           </p>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Building systems that work for you, not the other way around
-          </p>
+          <h1 className={"text-white text-3xl max-w-2xl mx-auto leading-loose"}>
+            BUILDING SYSTEMS THAT WORK FOR YOU, NOT THE OTHER WAY AROUND
+          </h1>
         </div>
 
         {/* Services Grid */}

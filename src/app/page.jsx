@@ -1,6 +1,6 @@
 import Services from "./components/OurCoreServices";
 import Hero from "./components/Hero";
-import WhoWeWorkWith from "./components/WhoWeWorkWith";
+// import WhoWeWorkWith from "./components/WWWW";
 import FAQAccordion from "./components/FAQ";
 import Footer05Page from "./components/footer-05/footer-05";
 import GoodCompany from "./components/GoodCompany";
@@ -8,7 +8,8 @@ import AboutUs from "./components/OurPhilosophy";
 import RevealAnimation from "./components/RevealAnimation";
 import ProblemsWeSolve from "./components/ProblemsWeSolve";
 import HowWeWork from "./components/HowWeWork";
-
+import { WhoWeWorkWith } from "./components/WWWW";
+import WhyAstrix from "./components/WhyAstrix";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
         <HowWeWork />
       </RevealAnimation>
 
-       <RevealAnimation delay={0.2}>
+      <RevealAnimation delay={0.2}>
         <GoodCompany />
       </RevealAnimation>
 
@@ -37,20 +38,18 @@ export default function Home() {
         <Services />
       </RevealAnimation>
 
-      <RevealAnimation delay={0.1}>
+      <RevealAnimation delay={0.2}>
         <WhoWeWorkWith />
       </RevealAnimation>
-
-      {/* <RevealAnimation delay={0.2}>
-        <PricingPlans />
-      </RevealAnimation> */}
 
       {/* <RevealAnimation delay={0.1}>
          <div className="pointer-events-none absolute -top-24 -right-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl max-w-screen"></div>
       </RevealAnimation> */}
 
+      <WhyAstrix />
+
       <FAQAccordion />
-      
+
       <Footer05Page />
     </>
   );

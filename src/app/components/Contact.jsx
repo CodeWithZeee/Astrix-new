@@ -125,7 +125,8 @@ const SERVICES = [
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
-  const redirectUrl = "https://ai.automationastrix.com/widget/booking/ldUWZEMuCZLT7aJQx4xB";
+  const redirectUrl =
+    "https://ai.automationastrix.com/widget/booking/ldUWZEMuCZLT7aJQx4xB";
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -365,7 +366,10 @@ export default function ContactForm() {
                     Transactional Consent *
                   </FormLabel> */}
                     <FormDescription>
-                      I consent to receive transactional messages from Astrix Digital Media on the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
+                      I consent to receive transactional messages from Astrix
+                      Digital Media on the phone number provided. Message
+                      frequency may vary. Message & Data rates may apply. Reply
+                      HELP for help or STOP to opt-out.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -391,7 +395,10 @@ export default function ContactForm() {
                     Marketing Consent (Optional)
                   </FormLabel> */}
                     <FormDescription>
-                      I consent to receive marketing and promotional messages from Astrix Digital Media at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt out.
+                      I consent to receive marketing and promotional messages
+                      from Astrix Digital Media at the phone number provided.
+                      Message frequency may vary. Message & Data rates may
+                      apply. Reply HELP for help or STOP to opt out.
                     </FormDescription>
                   </div>
                   <FormControl>

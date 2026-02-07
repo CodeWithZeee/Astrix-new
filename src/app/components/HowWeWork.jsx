@@ -105,7 +105,7 @@ export default function HowWeWork() {
           className="mt-12"
         >
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-full
               bg-linear-to-r from-sky-400 to-violet-500
               px-8 py-3 text-sm font-medium text-black

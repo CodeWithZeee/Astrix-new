@@ -21,6 +21,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "lib/prisma.js"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "lib/prisma.js",
+    "src/app/components/WWWW.jsx"
+  ],
   "exclude": ["node_modules"]
 }

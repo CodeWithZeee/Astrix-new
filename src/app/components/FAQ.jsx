@@ -7,32 +7,32 @@ const FAQAccordion = () => {
   const faqItems = [
     {
       id: 1,
-      question: "What makes Astrix unique?",
+      question: "Are you a software company or an agency?",
       answer:
-        "Our unmatched expertise and our tailored approach is what sets us apart. We prefer working with you, instead of for you. We dive into your business and cooperate with you to create actually impactful AI solutions that drive real results.",
+        "We're neither in the traditional sense. We work as a systems and implementation partner, combining web development, consulting, automation, and execution.",
     },
     {
       id: 2,
-      question: "Is my company a good fit for Astrix?",
+      question: "Do you only work with AI?",
       answer:
-        "We work with companies of all sizes across a wide variety of industries. Whether you're just beginning your AI journey or need advanced custom solutions, we're the ideal partner to help you succeed.",
+        "AI is one of the tools we use — not the starting point. If automation or marketing solves the problem better, we use that instead.",
     },
     {
       id: 3,
-      question: "How does your subscription model work?",
+      question: "Do you guarantee results?",
       answer:
-        "We understand that your business needs can vary from month to month. That's why we offer a flexible subscription model. Subscribe whenever you need AI-driven solutions, and cancel anytime you want. It's that simple!",
+        "We don't guarantee revenue. We focus on designing and implementing systems that support growth and reduce inefficiency.",
     },
     {
       id: 4,
-      question: "How long does the development phase take?",
+      question: "Can you work with our existing tools?",
       answer:
-        "The development timeline depends on the complexity of the solution. Simple workflow automations can be completed in 1-3 days, while chatbot and voice assistant development typically take 1-2 months.",
+        "In most cases, yes. We prefer improving what already exists rather than forcing unnecessary replacements.",
     },
     {
       id: 5,
-      question: "Do you provide support after implementation?",
-      answer: "Yes, we do! Our commitment doesn't end with implementation. We provide continuous monitoring and improvements to ensure your solutions perform optimally, and our support team is available 24/7 whenever you need assistance.",
+      question: "What's the best way to start?",
+      answer: "Start with a conversation. Talk to Astrix (our AI receptionist) or reach out directly — we'll help you decide next steps.",
     },
     // {
     //   id: 6,

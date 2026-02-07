@@ -1,10 +1,11 @@
-'use client';
+"use client";
 import React from "react";
 import Starfall from "./Starfall";
 import SuperButton from "./SuperButton";
 import AnimatedButton from "./AnimatedButton";
 // import AnimatedButton from "./calender_button";
 // import Button from "../components/ui/moving-border";
+import RotatingWord from "../animations/RotatingWord";
 
 const Hero = () => {
   return (
@@ -25,8 +26,8 @@ const Hero = () => {
           maxWidth: "100%",
           // width: "50%",
           textAlign: "center",
-          // fontFamily: "Glock Grotesk", 
-          fontWeight: "500",
+          // fontFamily: "Glock Grotesk",
+          // fontWeight: "500",
         }}
         className="px-4 sm:px-6 lg:px-8"
       >
@@ -35,14 +36,25 @@ const Hero = () => {
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-[18rem] sm:h-56 sm:w-[24rem] lg:h-144 lg:w-xl rounded-full bg-linear-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl"></div>
         {/* Your content here */}
         <h1 className="gradienttxt comfortaa text-3xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl leading-tight">
-          Fix your business growth bottlenecks using AI, automation and smarter systems.
+          Fix your business growth bottlenecks using
         </h1>
+        <span
+          className="text-4xl ml-1 inline-flex"
+          style={{
+            WebkitTextFillColor: "gray",
+            backgroundClip: "initial",
+          }}
+        >
+          <RotatingWord />
+        </span>
         <h2 className=" flex justify-center items-center px-4 max-w-3xl text-gray-500 ">
-          Astrix works as a strategic partner to help businesses capture more opportunities, respond fast, reduce operational friction and scale revenue-generating conversations across marketing, sales, and operations.
+          Astrix works as a strategic partner to help businesses capture more
+          opportunities, respond fast, reduce operational friction and scale
+          revenue-generating conversations across marketing, sales, and
+          operations.
         </h2>
         {/* <SuperButton /> */}
         <AnimatedButton />
-        
       </div>
     </>
   );

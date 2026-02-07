@@ -52,7 +52,7 @@ export default function GoodCompany() {
   return (
     <section className="relative w-full bg-[#0a0a0a] py-16 flex flex-col items-center overflow-hidden">
       <h2 className=" text-4xl md:text-5xl mb-10 text-indigo-600 text-center font-semibold">
-        Trusted <span className="text-white">By</span>
+        TRUSTED <span className="text-white">BY</span>
       </h2>
 
       <div className="relative w-1/2 sm:w-3/4 flex justify-center overflow-hidden group">
