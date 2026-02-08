@@ -120,13 +120,13 @@ export default function OurCoreServices() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group rounded-2xl relative bg-zinc-900 border border-zinc-800  p-8 transition-all duration-300 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-900/30 hover:-translate-y-1"
+              className="group rounded-2xl relative bg-zinc-900 border border-zinc-800  p-8 transition-all duration-300 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-900/30 hover:-translate-y-1"
             >
               {/* Subtle gradient accent */}
-              <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-blue-400/5 to-blue-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-br from-purple-500/10 via-purple-400/5 to-purple-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Icon */}
-              <div className="relative mb-5 inline-flex items-center justify-center w-12 h-12 rounded-3xl bg-zinc-800 text-zinc-300 group-hover:text-white group-hover:bg-blue-600/40 transition-all duration-300">
+              <div className="relative mb-5 inline-flex items-center justify-center w-12 h-12 rounded-3xl bg-zinc-800 text-zinc-300 group-hover:text-white group-hover:bg-purple-600/40 transition-all duration-300">
                 {service.icon}
               </div>
 
@@ -141,7 +141,7 @@ export default function OurCoreServices() {
               </div>
 
               {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-linear-to-r from-blue-400 to-blue-300 group-hover:w-full transition-all duration-500" />
+              <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-linear-to-r from-purple-400 to-purple-300 group-hover:w-full transition-all duration-500" />
             </div>
           ))}
         </div>

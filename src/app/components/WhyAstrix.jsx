@@ -29,8 +29,8 @@ export default function WhyAstrix() {
             </h1>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
-            What Sets Us Apart
+          <h2 className="quicksand text-4xl md:text-5xl font-bold text-white text-center">
+            WHAT SETS US APART
           </h2>
         </div>
 

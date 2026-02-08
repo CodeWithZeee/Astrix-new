@@ -44,7 +44,7 @@ const Hero = () => {
           Fix your business growth bottlenecks using
         </h1>
         <span
-          className="text-4xl ml-1 inline-flex"
+          className="text-4xl ml-1 inline-flex mb-8"
           style={{
             WebkitTextFillColor: "gray",
             backgroundClip: "initial",
@@ -52,7 +52,7 @@ const Hero = () => {
         >
           <RotatingWord />
         </span>
-        <h2 className=" flex justify-center items-center px-4 max-w-3xl text-gray-500 ">
+        <h2 className="flex justify-center items-center px-4 max-w-3xl text-gray-500 ">
           Astrix works as a strategic partner to help businesses capture more
           opportunities, respond fast, reduce operational friction and scale
           revenue-generating conversations across marketing, sales, and

@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { Red_Rose } from "next/font/google";
+
+const redRose = Red_Rose({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const logos = [
   { src: "/Trustee1.png", alt: "" },
@@ -51,7 +57,7 @@ export default function GoodCompany() {
 
   return (
     <section className="relative w-full bg-[#0a0a0a] py-16 flex flex-col items-center overflow-hidden">
-      <h2 className=" text-4xl md:text-5xl mb-10 text-indigo-600 text-center font-semibold">
+      <h2 className={` ${redRose.className} text-4xl md:text-5xl mb-10 text-purple-600 text-center font-semibold`}>
         TRUSTED <span className="text-white">BY</span>
       </h2>
 
