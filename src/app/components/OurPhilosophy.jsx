@@ -1,6 +1,9 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
+import { Caveat } from "next/font/google";
+
+const caveat = Caveat({ subsets: ["latin"], weight: "400" });
 
 function HoverHighlightText({
   children,
@@ -90,7 +93,7 @@ const AboutUs = () => {
         </p>
 
         {/* Main Text */}
-        <div className="max-w-3xl text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2 sm:p-3 md:p-4 leading-snug text-justify">
+        <div className={`max-w-3xl text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold p-2 sm:p-3 md:p-4 leading-snug text-justify ${caveat.className}`}>
           {/* <span className="">
           Hi, we're{" "}
           <span className="inline-flex items-center">
