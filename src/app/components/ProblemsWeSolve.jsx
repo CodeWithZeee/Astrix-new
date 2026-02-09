@@ -1,5 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
+import { Cabin_Sketch } from "next/font/google";
+
+const cabinSketch = Cabin_Sketch({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const problems = [
   "Broken lead generation systems",
@@ -36,7 +42,7 @@ export default function ProblemsWeSolve() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="mb-10 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight text-center"
+          className={`${cabinSketch.className} mb-10 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight text-center`}
         >
           Most businesses don't struggle because they lack tools —
           <span className="text-white/70">

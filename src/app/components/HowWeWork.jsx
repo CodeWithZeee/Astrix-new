@@ -1,5 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
+import { Condiment , Lumanosimo , Kaushan_Script } from "next/font/google";
+
+const condiment = Condiment({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const lumanosimo = Lumanosimo({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const kaushanScript = Kaushan_Script({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const steps = [
   {
@@ -54,7 +70,7 @@ export default function HowWeWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight"
+          className={`${condiment.className} tracking-wider mb-16 max-w-3xl text-3xl sm:text-4xl font-semibold leading-tight`}
         >
           A structured approach that stays flexible,
           <span className="text-white/70">
@@ -64,7 +80,7 @@ export default function HowWeWork() {
         </motion.h2>
 
         {/* Timeline */}
-        <div className="relative space-y-14 border-l border-white/10 pl-8">
+        <div className="relative space-y-14 border-l border-white/10 pl-8 ">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -77,9 +93,9 @@ export default function HowWeWork() {
               {/* dot */}
               <span className="absolute -left-2.25 top-2 h-3 w-3 rounded-full bg-linear-to-r from-violet-400 to-violet-500" />
 
-              <h3 className="text-xl font-medium pl-2">{step.title}</h3>
+              <h3 className={`text-xl font-medium pl-2 ${lumanosimo.className}`}>{step.title}</h3>
 
-              <p className="mt-2 max-w-xl text-white/70">{step.description}</p>
+              <p className={`mt-2 max-w-xl text-white/70 ${kaushanScript.className}`}>{step.description}</p>
             </motion.div>
           ))}
         </div>
