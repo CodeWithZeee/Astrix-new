@@ -6,9 +6,9 @@ import AnimatedButton from "./AnimatedButton";
 // import AnimatedButton from "./calender_button";
 // import Button from "../components/ui/moving-border";
 import RotatingWord from "../animations/RotatingWord";
-import { Cinzel } from "next/font/google";
+import { Nixie_One } from "next/font/google";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: "400" });
+const nixieOne = Nixie_One({ subsets: ["latin"], weight: "400" });
 
 const Hero = () => {
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-[18rem] sm:h-56 sm:w-[24rem] lg:h-144 lg:w-xl rounded-full bg-linear-to-bl from-orange-400/40 via-orange-500/30 to-transparent blur-3xl"></div>
         {/* Your content here */}
         <h1
-          className={`${cinzel.className} gradienttxt text-3xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl leading-tight`}
+          className={`${nixieOne.className} uppercase gradienttxt text-3xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center items-center max-w-4xl leading-tight`}
         >
           Fix your business growth bottlenecks using
         </h1>

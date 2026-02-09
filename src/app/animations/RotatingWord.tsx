@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { Audiowide } from "next/font/google";
 import { useEffect, useState } from "react";
 
@@ -16,30 +15,46 @@ type RotatingWordProps = {
 };
 
 export default function RotatingWord({ className }: RotatingWordProps) {
-  const [index, setIndex] = useState(0);
+  const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
-    }, 2200); // timing similar to Shadcn Studio
+    const currentWord = words[wordIndex];
+    const typingSpeed = isDeleting ? 40 : 80;
 
-    return () => clearInterval(interval);
-  }, []);
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        setText(currentWord.substring(0, text.length + 1));
+
+        if (text === currentWord) {
+          setTimeout(() => setIsDeleting(true), 800); // pause after typing
+        }
+      } else {
+        // Deleting
+        setText(currentWord.substring(0, text.length - 1));
+
+        if (text === "") {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, wordIndex]);
 
   return (
-    <span className="text-gray-500 relative inline-block">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={words[index]}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          className={`${audiowide.className}${className ? ` ${className}` : ""}`}
-        >
-          {words[index]}
-        </motion.span>
-      </AnimatePresence>
+    <span
+      className={`relative inline-flex text-gray-400 ${audiowide.className}${
+        className ? ` ${className}` : ""
+      }`}
+    >
+      {text}
+
+      {/* Cursor */}
+      <span className="ml-1 animate-pulse">|</span>
     </span>
   );
 }

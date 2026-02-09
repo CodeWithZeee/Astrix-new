@@ -75,7 +75,7 @@ export default function HowWeWork() {
               className="relative"
             >
               {/* dot */}
-              <span className="absolute -left-2.25 top-2 h-3 w-3 rounded-full bg-linear-to-r from-sky-400 to-violet-500" />
+              <span className="absolute -left-2.25 top-2 h-3 w-3 rounded-full bg-linear-to-r from-violet-400 to-violet-500" />
 
               <h3 className="text-xl font-medium pl-2">{step.title}</h3>
 
@@ -107,7 +107,7 @@ export default function HowWeWork() {
           <a
             href="/contact"
             className="inline-flex items-center gap-2 rounded-full
-              bg-linear-to-r from-sky-400 to-violet-500
+              bg-linear-to-r from-purple-400 to-violet-500
               px-8 py-3 text-sm font-medium text-black
               transition-transform duration-200 hover:scale-[1.03]"
           >

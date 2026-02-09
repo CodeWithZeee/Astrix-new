@@ -1,3 +1,6 @@
+import { Righteous } from "next/font/google";
+const righteous = Righteous({ subsets: ["latin"], weight: "400" });
+
 export default function OurCoreServices() {
   const services = [
     {
@@ -107,11 +110,11 @@ export default function OurCoreServices() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center flex flex-col items-center">
-          <p className="text-white/70 border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
+          <p className= "text-white/70 border border-white/20 text-xs sm:text-sm px-4 sm:px-8 py-1 rounded-full mb-4 sm:mb-6 md:mb-8">
             OUR CORE SERVICES
           </p>
-          <h1 className={"text-white text-3xl max-w-2xl mx-auto leading-loose"}>
-            BUILDING SYSTEMS THAT WORK FOR YOU, NOT THE OTHER WAY AROUND
+          <h1 className={`${righteous.className} text-white text-3xl max-w-2xl mx-auto leading-loose`}>
+            BUILDING <span className="text-purple-500 underline">SYSTEMS</span> THAT WORK FOR YOU, NOT THE OTHER WAY AROUND
           </h1>
         </div>
 

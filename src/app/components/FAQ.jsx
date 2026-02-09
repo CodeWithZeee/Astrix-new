@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
+import { Montserrat_Alternates } from "next/font/google";
+const montserratAlternates = Montserrat_Alternates({ subsets: ["latin"], weight: "400" });
 
 const FAQAccordion = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -86,7 +88,7 @@ const FAQAccordion = () => {
     <div  className="leading-relaxed p-4">
       <div id="FAQ" className="flex justify-center items-start my-16">
         <div className="w-full sm:w-10/12 md:w-1/2 my-1">
-          <h2 className="text-5xl text-center text-indigo-600">
+          <h2 className={`${montserratAlternates.className} text-5xl text-center text-purple-600`}>
             FAQ
           </h2>
           <p className="text-gray-500 mb-8 text-center">We've gone ahead and answered the questions we're asked most often.</p>

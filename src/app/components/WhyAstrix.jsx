@@ -1,8 +1,14 @@
-import { Tomorrow } from "next/font/google";
+import { Tomorrow , Montserrat_Alternates } from "next/font/google";
 
 const tomorrow = Tomorrow({
   subsets: ["latin"],
   // weight: ["300", "400", "500", "700"],
+  weight: ["400"],
+  // style: ["normal", "italic"],
+});
+
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
   weight: ["400"],
   // style: ["normal", "italic"],
 });
@@ -29,8 +35,8 @@ export default function WhyAstrix() {
             </h1>
           </div>
 
-          <h2 className="quicksand text-4xl md:text-5xl font-bold text-white text-center">
-            WHAT SETS US APART
+          <h2 className={`${montserratAlternates.className} text-4xl md:text-5xl font-bold text-white text-center`}>
+            WHAT <span className="text-purple-800">SETS</span> US APART
           </h2>
         </div>
 
