@@ -7,9 +7,10 @@ import Image from "next/image";
 export default function MovingBorderDemo() {
   const router = useRouter();
 
-  const handleClick = () => {
-    router.push("/contact");
-  };
+ const handleClick = () => {
+  window.location.href =
+    "https://ai.automationastrix.com/widget/booking/ldUWZEMuCZLT7aJQx4xB";
+};
 
   return (
     <div>

@@ -12,10 +12,22 @@ const Navbar = () => {
       name: "Home",
       href: "/",
     },
+
+    // {
+    //   name: "Contact",
+    //   href: "/contact",
+    // },
+
     {
       name: "Contact",
-      href: "/contact",
+      href: "https://ai.automationastrix.com/widget/booking/ldUWZEMuCZLT7aJQx4xB",
     },
+
+    // {
+    //   name: "Contact",
+    //   href: "/contact2",
+    // },
+    
     {
       name: "Privacy",
       href: "/privacy",
@@ -23,7 +35,7 @@ const Navbar = () => {
     {
       name: "Terms",
       href: "/terms",
-    },
+    }
     // {
     //   name: "Pricing",
     //   href: "/#PricingPlans",
